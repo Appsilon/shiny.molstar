@@ -10,6 +10,13 @@ We created a R Shiny wrapper based on [shiny.react](https://appsilon.github.io/s
 
 Mol* (/'molstar/) is a modern web-based open-source toolkit for visualization and analysis of large-scale molecular data.
 
+## TODO before making it public:
+
+* Decide on keeping JS inside r package or delivered via cdn
+    * add inst/www to .Rbuildignore
+    * change R/components.R removing the comments on `molstarDependency`
+* remove this section
+
 ## Getting started
 
 To install the packages, run:

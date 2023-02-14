@@ -3,7 +3,11 @@ molstarDependency <- function() { # nolint: linter_name
     name = "molstar",
     version = "0.1.0",
     package = "shiny.molstar",
-    src = "www",
+    src = c(
+      # When package is public it should resolve the JS file in CDN
+      # href = "https://cdn.jsdelivr.net/gh/Appsilon/shiny.molstar@main/inst/www/"
+      "inst/www"
+    ),
     script = "shiny.molstar.min.js"
   )
 }
