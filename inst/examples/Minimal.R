@@ -2,14 +2,14 @@ library(glue)
 library(shiny)
 library(shiny.molstar)
 
-pbdId <- "1LOL"
+pdbId <- "1LOL"
 
-print(Molstar(pbdId = pbdId, dimensions = c(300, 300)))
+print(Molstar(pdbId = pdbId, dimensions = c(300, 300)))
 
 shinyApp(
   ui = tagList(
-    h1(glue("Molecular visualization \"{pbdId}\"")),
-    Molstar(pbdId = pbdId, dimensions = c(300, 300))
+    h1(glue("Molecular visualization \"{pdbId}\"")),
+    Molstar(pdbId = pdbId, dimensions = c(300, 300))
   ),
   server = function(input, output) {
   }

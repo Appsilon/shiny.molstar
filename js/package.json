@@ -5,8 +5,10 @@
     "lint": "eslint --ext .js,.jsx src"
   },
   "dependencies": {
+    "core-js": "^3.28.0",
     "jest": "^29.4.2",
-    "molstar-react": "^0.5.1"
+    "molstar-react": "^0.5.1",
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
