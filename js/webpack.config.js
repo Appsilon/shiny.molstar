@@ -4,9 +4,13 @@ const path = require('path');
 const config = {
   mode: 'production',
   entry: './src/index.js',
+
+  devtool: "source-map",
+
   output: {
     path: path.join(__dirname, '..', 'inst', 'www'),
-    filename: 'shiny.molstar.min.js'
+    filename: 'shiny.molstar.min.js',
+    sourceMapFilename: "index.js.map"
   },
   module: {
     rules: [
