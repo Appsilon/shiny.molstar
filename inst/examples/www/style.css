@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(21,53,74);
+  color: rgb(255, 255, 255);
+}
+
+main {
+  margin-top: 2em;
+  padding: 1em;
+  max-width: 500px;
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 3px 4px rgb(255, 165, 0);
+}
+
+footer {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover,
+footer a:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}

@@ -18,7 +18,7 @@ shinyApp(
         "package"
       ),
       tags$p(
-        "Made with ❤️ at",
+        "Developed with ❤️ by",
         tags$a(href = "https://appsilon.github.io/shiny.molstar", "Appsilon")
       )
     )
