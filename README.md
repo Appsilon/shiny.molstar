@@ -1,4 +1,4 @@
-# shiny.molstar
+# shiny.molstar <a href="https://appsilon.github.io/shiny.molstar/"><img src="man/figures/logo.svg" align="right" alt="data.validator logo" style="height: 140px;"></a>
 
 > R Shiny wrapper for Mol* (/'molstar/) - A visualization toolkit of large-scale molecular data
 
@@ -10,7 +10,7 @@ We created a R Shiny wrapper based on [shiny.react](https://appsilon.github.io/s
 
 Mol* (/'molstar/) is a modern web-based open-source toolkit for visualization and analysis of large-scale molecular data.
 
-## TODO before making it public:
+#### TODO before making it public:
 
 * Add google tags and tracking to docs
 * Decide on keeping JS inside r package or delivered via cdn
