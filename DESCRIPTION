@@ -1,12 +1,14 @@
 Package: shiny.molstar
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Mol* (/'molstar/) for Shiny, visualisation toolkit of large-scale molecular data
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: c(
+    person("André Veríssimo", role = "aut", email = "andre.verissimo@appsilon.com")
+    person("Appsilon Sp. z o.o.", role = c("cph", "cre"), email = "hello@appsilon.com")
+  )
+Description: Mol* (/'molstar/) for Shiny through shiny.react binding
+    using components in molstar-react node.js module.
+License: Appsilon proprietary
 Encoding: UTF-8
 LazyData: true
 Imports:
@@ -15,3 +17,4 @@ Imports:
   shiny.react,
   glue
 RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
