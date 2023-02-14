@@ -2,7 +2,7 @@ library(glue)
 library(shiny)
 library(shiny.molstar)
 
-pdbId <- "1LOL"
+pdbId <- "1LOL" # nolint: linter_name
 
 print(Molstar(pdbId = pdbId, dimensions = c(300, 300)))
 

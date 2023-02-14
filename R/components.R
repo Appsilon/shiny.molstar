@@ -1,4 +1,4 @@
-molstarDependency <- function() {
+molstarDependency <- function() { # nolint: linter_name
   htmltools::htmlDependency(
     name = "molstar",
     version = "0.1.0",
@@ -33,4 +33,4 @@ NULL
 #' @export
 #' @examples
 #' shiny.molstar::Molstar(pbdId="1LOL", dimensions=c(300, 300))
-Molstar <- component("Molstar")
+Molstar <- component("Molstar") # nolint: linter_name

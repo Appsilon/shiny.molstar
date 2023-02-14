@@ -1,14 +1,14 @@
 # shiny.molstar
 
-> R Shiny wrapper for Mol* (/'molstar/) - A visualisation toolkit of large-scale molecular data
+> R Shiny wrapper for Mol* (/'molstar/) - A visualization toolkit of large-scale molecular data
 
 <!-- badges: start -->
 [![R-CMD-checks](https://github.com/Appsilon/shiny.molstar/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/Appsilon/shiny.molstar/actions/workflows/r-cmd-check.yml)
 <!-- badges: end -->
 
-We created a R Shiny wrapper based on [shiny.react](https://appsilon.github.io/shiny.react/) and uses the node.js module [molstar-react](https://www.npmjs.com/package/molstar-react) that allows to visualize large scale molecular data within shiny application.
+We created a R Shiny wrapper based on [shiny.react](https://appsilon.github.io/shiny.react/) and uses the 'node.js' module [molstar-react](https://www.npmjs.com/package/molstar-react) that allows to visualize large scale molecular data within shiny application.
 
-Mol* (/'molstar/) is a modern web-based open-source toolkit for visualisation and analysis of large-scale molecular data.
+Mol* (/'molstar/) is a modern web-based open-source toolkit for visualization and analysis of large-scale molecular data.
 
 ## Getting started
 

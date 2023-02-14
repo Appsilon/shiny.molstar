@@ -1,6 +1,6 @@
 Package: shiny.molstar
 Type: Package
-Title: R Shiny wrapper for Mol* (/'molstar/) - A visualisation toolkit of large-scale molecular data
+Title: R Shiny wrapper for Mol* (/'molstar/) - A visualization toolkit of large-scale molecular data
 Version: 0.1.0
 Authors@R: c(
     person("André Veríssimo", role = "aut", email = "andre.verissimo@appsilon.com"),
@@ -8,7 +8,8 @@ Authors@R: c(
   )
 Description: Mol* (/'molstar/) for Shiny through shiny.react binding
     using components in molstar-react node.js module.
-License: Appsilon proprietary
+Language: en-US
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
