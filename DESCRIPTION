@@ -1,9 +1,9 @@
 Package: shiny.molstar
 Type: Package
-Title: Mol* (/'molstar/) for Shiny, visualisation toolkit of large-scale molecular data
+Title: R Shiny wrapper for Mol* (/'molstar/) - A visualisation toolkit of large-scale molecular data
 Version: 0.1.0
-Author: c(
-    person("André Veríssimo", role = "aut", email = "andre.verissimo@appsilon.com")
+Authors@R: c(
+    person("André Veríssimo", role = "aut", email = "andre.verissimo@appsilon.com"),
     person("Appsilon Sp. z o.o.", role = c("cph", "cre"), email = "hello@appsilon.com")
   )
 Description: Mol* (/'molstar/) for Shiny through shiny.react binding
@@ -13,8 +13,17 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   htmltools,
-  shiny,
-  shiny.react,
-  glue
+  shiny.react
+Suggests:
+    knitr,
+    lintr,
+    glue,
+    shiny,
+    mockery (>= 0.4.3),
+    rcmdcheck,
+    rmarkdown,
+    sessioninfo,
+    spelling,
+    testthat (>= 3.0.0)
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)

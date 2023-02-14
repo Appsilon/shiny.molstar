@@ -4,7 +4,7 @@
 \alias{template}
 \title{template}
 \arguments{
-\item{inputId}{The `input` slot that will be used to access the value.}
+\item{inputId}{The \code{input} slot that will be used to access the value.}
 
 \item{...}{Component props and children. See the official Blueprint docs for
 details.}
