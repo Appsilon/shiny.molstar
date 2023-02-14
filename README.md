@@ -14,7 +14,8 @@ Mol* (/'molstar/) is a modern web-based open-source toolkit for visualization an
 
 * Decide on keeping JS inside r package or delivered via cdn
     * add inst/www to .Rbuildignore
-    * change R/components.R removing the comments on `molstarDependency`
+    * change R/components.R  `molstarDependency` by replacing `inst/www` with:
+        * `c(href = "https://cdn.jsdelivr.net/gh/Appsilon/shiny.molstar@main/inst/www/")`
 * remove this section
 
 ## Getting started
