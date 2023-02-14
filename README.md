@@ -12,6 +12,7 @@ Mol* (/'molstar/) is a modern web-based open-source toolkit for visualization an
 
 ## TODO before making it public:
 
+* Add google tags and tracking to docs
 * Decide on keeping JS inside r package or delivered via cdn
     * add inst/www to .Rbuildignore
     * change R/components.R  `molstarDependency` by replacing `inst/www` with:

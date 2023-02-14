@@ -7,6 +7,7 @@ template:
   includes:
     in_header: |
       <!-- Google tag (gtag.js) -->
+      <!--
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SESD3QWD7B"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,6 +15,7 @@ template:
         gtag('js', new Date());
         gtag('config', 'G-SESD3QWD7B');
       </script>
+      -->
       <script async defer src="https://buttons.github.io/buttons.js"></script>
     before_navbar: |
       <a href="https://shiny.tools" class="home"><i class="fa fa-lg fa-chevron-left"></i></a>
