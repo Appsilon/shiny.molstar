@@ -1,23 +1,14 @@
 # shiny.molstar <a href="https://appsilon.github.io/shiny.molstar/"><img src="man/figures/logo.svg" align="right" alt="data.validator logo" style="height: 140px;"></a>
 
-> R Shiny wrapper for Mol* (/'molstar/) - A visualization toolkit of large-scale molecular data
+> _R Shiny wrapper for Mol* (/'molstar/) - A visualization toolkit of large-scale molecular data_
 
 <!-- badges: start -->
 [![R-CMD-checks](https://github.com/Appsilon/shiny.molstar/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/Appsilon/shiny.molstar/actions/workflows/r-cmd-check.yml)
 <!-- badges: end -->
 
-We created a R Shiny wrapper based on [shiny.react](https://appsilon.github.io/shiny.react/) and uses the 'node.js' module [molstar-react](https://www.npmjs.com/package/molstar-react) that allows to visualize large scale molecular data within shiny application.
+Based on [Mol*](https://molstar.org) (/'molstar/) and powered by [shiny.react](https://appsilon.github.io/shiny.react/)
 
-Mol* (/'molstar/) is a modern web-based open-source toolkit for visualization and analysis of large-scale molecular data.
-
-#### TODO before making it public:
-
-* Add google tags and tracking to docs
-* Decide on keeping JS inside r package or delivered via cdn
-    * add inst/www to .Rbuildignore
-    * change R/components.R  `molstarDependency` by replacing `inst/www` with:
-        * `c(href = "https://cdn.jsdelivr.net/gh/Appsilon/shiny.molstar@main/inst/www/")`
-* remove this section
+We created a R Shiny wrapper based on [shiny.react](https://appsilon.github.io/shiny.react/) and [molstar-react](https://www.npmjs.com/package/molstar-react) _(node.js library)_ that gives all the powerful tools of Mol* open-source toolkit for visualization and analysis of large-scale molecular data.
 
 ## Getting started
 
