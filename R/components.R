@@ -34,5 +34,5 @@ NULL
 #' @inherit template params
 #' @export
 #' @examples
-#' shiny.molstar::Molstar(pbdId="1LOL", dimensions=c(300, 300))
+#' Molstar(pbdId="1LOL", dimensions=c(300, 300))
 Molstar <- component("Molstar") # nolint: linter_name
