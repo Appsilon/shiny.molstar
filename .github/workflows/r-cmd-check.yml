@@ -51,6 +51,12 @@ jobs:
           pak-version: 'devel'
           extra-packages: local::. # Necessary to avoid object usage linter errors.
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: 'yarn'
+          cache-dependency-path: js/yarn.lock
+
       - name: R CMD check
         uses: r-lib/actions/check-r-package@v2
         with:
@@ -67,9 +73,7 @@ jobs:
           quit(status = length(lints) > 0)
 
       - name: Lint Javascript
-        run: |
-          yarn --cwd js/ init
-          yarn --cwd run eslint
+        run: yarn --cwd js run eslint
 
       - name: Spell Check
         if : always()
