@@ -26,11 +26,11 @@ class AlphaFoldMolstar extends React.Component {
 
   render() {
     return <>
-      { !!this.state.error && <div class="error">{this.state.error}</div> }
+      { !!this.state.error && <div className="error">{this.state.error}</div> }
       <Molstar url={this.state.pdb} {...this.props} />
     </>;
   }
-};
+}
 
 AlphaFoldMolstar.propTypes = Molstar.propTypes;
 AlphaFoldMolstar.propTypes.afId = PropTypes.string.isRequired;

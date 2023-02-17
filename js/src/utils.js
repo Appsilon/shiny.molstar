@@ -6,7 +6,7 @@
 //
 // Information about AlphaFold pavailable metadata at:
 //   https://www.ebi.ac.uk/ebisearch/metadata.ebi?db=alphafold
-export function retrieve_metadata(afId, full, callback) {
+export function retrieve_metadata(afId, fullQuery, callback) {
   const baseUrl = "https://www.ebi.ac.uk/ebisearch/ws/rest/alphafold" +
     `/entry/${afId}`;
 
@@ -15,7 +15,7 @@ export function retrieve_metadata(afId, full, callback) {
     fields: ["pdb_url"],
   };
 
-  if (!!full) {
+  if (fullQuery) {
     params.fields = params.fields.concat([
       "name", "description", "scientific_name", "gene", "cif_url",
       "pae_doc_url", "pae_image_url"

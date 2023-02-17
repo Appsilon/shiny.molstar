@@ -1,6 +1,5 @@
 library(shiny)
-devtools::load_all()
-# library(shiny.molstar)
+library(shiny.molstar)
 
 shinyApp(
   ui = basicPage(

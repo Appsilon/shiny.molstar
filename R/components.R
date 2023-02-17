@@ -19,7 +19,7 @@ component <- function(name) {
   }
 }
 
-customComponent <- function(name) {
+custom_component <- function(name) {
   function(...) {
     shiny.react::reactElement(
       module = "@/shiny.molstar",
@@ -53,7 +53,7 @@ Molstar <- component("Molstar") # nolint: linter_name
 #' @examples
 #' url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
 #' AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions=c(300, 300))
-AlphaFoldMolstar <- customComponent("AlphaFoldMolstar") # nolint: linter_name
+AlphaFoldMolstar <- custom_component("AlphaFoldMolstar") # nolint: linter_name
 
 
 #' AlphaFoldDetails shiny element
@@ -62,4 +62,4 @@ AlphaFoldMolstar <- customComponent("AlphaFoldMolstar") # nolint: linter_name
 #' @export
 #' @examples
 #' AlphaFoldDetails(afId = "A0A1U8FD60", dimensions=c(300, 300))
-AlphaFoldDetails <- customComponent("AlphaFoldDetails") # nolint: linter_name
+AlphaFoldDetails <- custom_component("AlphaFoldDetails") # nolint: linter_name
