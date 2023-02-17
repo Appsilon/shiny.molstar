@@ -13,7 +13,7 @@ const config = {
     sourceMapFilename: "index.js.map"
   },
   optimization: {
-    minimize: false
+    minimize: true
   },
   resolve: { extensions: ['.js', '.jsx'] },
   module: {

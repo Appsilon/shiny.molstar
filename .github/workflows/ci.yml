@@ -57,6 +57,10 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: js/yarn.lock
 
+      - name: Install Node.js dependencies
+        run: yarn install
+        working-directory: js
+
       - name: R CMD check
         uses: r-lib/actions/check-r-package@v2
         with:

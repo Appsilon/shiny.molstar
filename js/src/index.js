@@ -1,4 +1,3 @@
-import "core-js/stable";
 import "regenerator-runtime/runtime";
 import Molstar from 'molstar-react';
 import AlphaFoldMolstar from './alpha_fold_molstar';
