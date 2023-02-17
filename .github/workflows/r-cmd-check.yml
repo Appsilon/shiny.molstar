@@ -66,12 +66,10 @@ jobs:
           for (lint in lints) print(lint)
           quit(status = length(lints) > 0)
 
-      - name: Lint Code Base
-        uses: github/super-linter/slim@v4
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lint Javascript
+        run: |
+          yarn --cwd js/ init
+          yarn --cwd run eslint
 
       - name: Spell Check
         if : always()
