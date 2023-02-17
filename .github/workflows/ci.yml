@@ -73,7 +73,8 @@ jobs:
           quit(status = length(lints) > 0)
 
       - name: Lint Javascript
-        run: yarn --cwd js run eslint
+        run: yarn lint
+        working-directory: js
 
       - name: Spell Check
         if : always()
