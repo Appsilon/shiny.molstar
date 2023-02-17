@@ -1,8 +1,11 @@
-require("core-js/stable");
-require("regenerator-runtime/runtime");
-const Molstar = require('molstar-react');
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import Molstar from 'molstar-react';
+import AlphaFoldMolstar from './alpha_fold_molstar';
+import AlphaFoldDetails from './alpha_fold_details';
 
 window.jsmodule = {
   ...window.jsmodule,
-  'molstar-react': Molstar,
+  'molstar-react': { Molstar },
+  '@/shiny.molstar': { AlphaFoldMolstar, AlphaFoldDetails }
 };

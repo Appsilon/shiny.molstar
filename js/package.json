@@ -5,6 +5,7 @@
     "lint": "eslint --ext .js,.jsx src"
   },
   "dependencies": {
+    "@babel/register": "^7.18.9",
     "core-js": "^3.28.0",
     "jest": "^29.4.2",
     "molstar-react": "^0.5.1",

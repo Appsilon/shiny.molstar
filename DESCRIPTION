@@ -23,6 +23,7 @@ Suggests:
     mockery (>= 0.4.3),
     rcmdcheck,
     rmarkdown,
+    markdown,
     sessioninfo,
     spelling,
     testthat (>= 3.0.0)

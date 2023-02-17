@@ -3,14 +3,20 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgb(21,53,74);
-  color: rgb(255, 255, 255);
 }
 
 main {
+  display: flex;
+  flex-flow: row wrap;
   margin-top: 2em;
+  gap: 1em;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.box {
   padding: 1em;
-  max-width: 500px;
-  min-width: 300px;
+  max-width: calc(350px + 1em);
   background-color: rgb(255, 255, 255);
   color: rgb(51, 51, 51);
   border: solid 2px rgb(255, 255, 255);
@@ -19,6 +25,7 @@ main {
 }
 
 footer {
+  margin-top: 1em;
   text-align: center;
   color: rgb(255, 255, 255);
 }
@@ -32,4 +39,25 @@ footer a:focus {
 footer a {
   color: rgb(255, 255, 255);
   text-decoration: none;
+}
+
+.wrapper-alphafold h4 {
+  margin-bottom: 0;
+}
+
+.wrapper-alphafold ul {
+  margin-top: 0;
+}
+
+.details {
+  padding-left: 1em;
+}
+
+.details .label-detail {
+  color: #444;
+  font-style: italic;
+}
+
+.pae_image img {
+  width: 200px;
 }

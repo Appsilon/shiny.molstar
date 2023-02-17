@@ -5,19 +5,26 @@ library(shiny.molstar)
 pdbId <- "1LOL" # nolint: linter_name
 
 shinyApp(
-  ui = tagList(
+  ui = basicPage(
     tags$main(
-      h2(glue("Molecular visualization \"{pdbId}\"")),
-      Molstar(
-        pdbId = pdbId,
-        dimensions = c(300, 300),
-        showAxis = TRUE
+      tags$div(
+        class = "box",
+        Molstar(
+          pdbId = pdbId,
+          dimensions = c(300, 300),
+          showAxes = TRUE
+        ),
+        tags$hr(),
+        tags$span(glue("Molecular visualization of pdbID: \"{pdbId}\""))
       )
     ),
     #
     # Footer and Styling
     #
     tags$footer(
+      tags$p(
+        actionButton("show", "Show source code")
+      ),
       tags$p(
         "Minimal example from ",
         tags$a(
@@ -33,8 +40,30 @@ shinyApp(
         )
       )
     ),
-    tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
   ),
   server = function(input, output) {
+    observeEvent(input$show, {
+      showModal(modalDialog(
+        title = "Source code for example",
+        size = "l",
+        easyClose = TRUE,
+        includeMarkdown(
+          paste(
+            c(
+              "```{r}",
+              readLines(
+                system.file(
+                  "examples/AlphaFoldDetails.R",
+                  package = "shiny.molstar"
+                )
+              ),
+              "```"
+            ),
+            collapse = HTML("\n")
+          )
+        )
+      ))
+    })
   }
 )
