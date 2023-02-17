@@ -1,6 +1,6 @@
 on: push
 
-name: R-CMD-checks
+name: CI
 
 jobs:
   main:
