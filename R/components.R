@@ -43,7 +43,7 @@ NULL
 #' @inherit template params
 #' @export
 #' @examples
-#' Molstar(pbdId="1LOL", dimensions=c(300, 300))
+#' Molstar(pbdId = "1LOL", dimensions = c(300, 300))
 Molstar <- component("Molstar") # nolint: linter_name
 
 #' AlphaFoldMolstar shiny element
@@ -52,7 +52,7 @@ Molstar <- component("Molstar") # nolint: linter_name
 #' @export
 #' @examples
 #' url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
-#' AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions=c(300, 300))
+#' AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions = c(300, 300))
 AlphaFoldMolstar <- custom_component("AlphaFoldMolstar") # nolint: linter_name
 
 

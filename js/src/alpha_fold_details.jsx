@@ -18,7 +18,7 @@ class AlphaFoldDetails extends React.Component {
 
   componentDidMount() {
     retrieve_metadata(this.props.afId, true, data => {
-      if (!!data.entries && data.entries.length > 0) {
+      if (data.entries && data.entries.length > 0) {
         const result = data.entries[0];
         let desc = result.fields.description[0];
         desc = desc.charAt(0).toUpperCase() + desc.slice(1);
@@ -37,12 +37,11 @@ class AlphaFoldDetails extends React.Component {
   }
 
   render() {
-    console.log(this.state, this.props.showFiles && (!!this.state.pdb || !!this.state.cif || !!this.state.pae));
 
     const hasDesc = !!this.state.description;
     const hasPdb = !!this.state.pdb;
-    const hasCif = !!this.state.pdb;
-    const hasPae = !!this.state.pdb;
+    const hasCif = !!this.state.cif;
+    const hasPae = !!this.state.pae;
 
     return <div className="alphafold-details">
       <h3>{hasDesc ? this.state.description : this.props.afId }</h3>
@@ -73,7 +72,7 @@ class AlphaFoldDetails extends React.Component {
         </div>
       }
       {
-        this.props.showFiles && (!!this.state.pdb || !!this.state.cif || !!this.state.pae) && <>
+        this.props.showFiles && (hasPdb || hasCif || hasPae) && <>
             <h4>Download</h4>
             <ul>
               { hasPdb ? <li><a target="_blank" rel="noreferrer" href={this.state.pdb} >PBD file</a></li> : null }

@@ -28,6 +28,9 @@ export function retrieve_metadata(afId, fullQuery, callback) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      callback(data);
+      if (!!data.entries && data.entries.length > 0) {
+        const result = data.entries[0];
+        callback(result)
+      }
     });
 }
