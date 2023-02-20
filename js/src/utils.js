@@ -30,7 +30,7 @@ export function retrieve_metadata(afId, fullQuery, callback) {
     .then(data => {
       if (data.entries && data.entries.length > 0) {
         const result = data.entries[0];
-        callback(result)
+        callback(result);
       }
     });
 }
