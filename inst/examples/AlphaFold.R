@@ -3,7 +3,6 @@ library(shiny.molstar)
 
 shinyApp(
   ui = basicPage(
-    tags$style(HTML("html, body { margin: 0; background-} ")),
     tags$main(
       tags$div(
         class = "box",
