@@ -61,7 +61,7 @@ shinyApp(
               sample_code,
               "```"
             ),
-            collapse = HTML("\n")
+            collapse = shiny::HTML("\n")
           )
         )
       ))

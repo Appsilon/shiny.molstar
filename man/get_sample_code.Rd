@@ -12,10 +12,11 @@ get_sample_code(lookup, example_path)
 \item{example_path}{path to file to load example from}
 }
 \value{
-a vector of lines of the
+a vector of lines of the sample code
 }
 \description{
-It removes lines that are surrounded by a START and END tag.
+It removes lines that are surrounded by a "# START \if{html}{\out{<tag>}}" and "# END \if{html}{\out{<tag>}}"
+comment.
 }
 \details{
 There cannot be ambiguous tags in the code or the same tag appearing
@@ -35,16 +36,4 @@ will be changed to
 \if{html}{\out{<div class="sourceCode">}}\preformatted{... # code before
 ... # code after
 }\if{html}{\out{</div>}}
-}
-\examples{
-get_sample_code("remove_from_sample_ui", "examples/AlphaFoldDetails.R")
-
-# Removes two blocks of code
-get_sample_code(
-  c(
-    "remove_from_sample_ui",
-    "remove_from_sample_server"
-  ),
-  "examples/AlphaFoldDetails.R"
-)
 }

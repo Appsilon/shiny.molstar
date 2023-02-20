@@ -7,11 +7,8 @@
 footer_tag()
 }
 \value{
-a taglist for the footer and css
+a common footer and css for the examples
 }
 \description{
-Common footer for all examples
-}
-\examples{
-footer_tag()
+This function is not exported and shouldn't be used outside of the examples
 }

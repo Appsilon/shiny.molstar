@@ -1,9 +1,8 @@
 #' Common footer for all examples
 #'
-#' @return a taglist for the footer and css
+#' This function is not exported and shouldn't be used outside of the examples
 #'
-#' @examples
-#' footer_tag()
+#' @return a common footer and css for the examples
 footer_tag <- function() {
   shiny::tagList(
     shiny::tags$footer(
@@ -19,7 +18,7 @@ footer_tag <- function() {
         "package"
       ),
       shiny::tags$p(
-        "Developed with ❤️ by",
+        "Developed with \u2764\uFE0F by",
         shiny::tags$a(
           href = "https://appsilon.github.io/shiny.molstar", "Appsilon"
         )
@@ -31,7 +30,8 @@ footer_tag <- function() {
 
 #' Get minimal sample code from example file
 #'
-#' It removes lines that are surrounded by a START and END tag.
+#' It removes lines that are surrounded by a "# START <tag>" and "# END <tag>"
+#' comment.
 #'
 #' There cannot be ambiguous tags in the code or the same tag appearing
 #' multiple times.
@@ -56,18 +56,7 @@ footer_tag <- function() {
 #' @param lookup suffix of tag that surrounds code
 #' @param example_path path to file to load example from
 #'
-#' @return a vector of lines of the
-#' @examples
-#' get_sample_code("remove_from_sample_ui", "examples/AlphaFoldDetails.R")
-#'
-#' # Removes two blocks of code
-#' get_sample_code(
-#'   c(
-#'     "remove_from_sample_ui",
-#'     "remove_from_sample_server"
-#'   ),
-#'   "examples/AlphaFoldDetails.R"
-#' )
+#' @return a vector of lines of the sample code
 get_sample_code <- function(lookup, example_path) {
   sample_code <- readLines(
     system.file(
