@@ -18,21 +18,18 @@ class AlphaFoldDetails extends React.Component {
 
   componentDidMount() {
     retrieve_metadata(this.props.afId, true, data => {
-      if (data.entries && data.entries.length > 0) {
-        const result = data.entries[0];
-        let desc = result.fields.description[0];
-        desc = desc.charAt(0).toUpperCase() + desc.slice(1);
-        this.setState({
-          id: result.id,
-          url: `https://www.alphafold.ebi.ac.uk/entry/${this.props.afId}`,
-          pdb: result.fields.pdb_url[0],
-          cif: result.fields.cif_url[0],
-          pae: result.fields.pae_doc_url[0],
-          pae_img_url: result.fields.pae_image_url[0],
-          description: desc,
-          scientific_name: result.fields.scientific_name[0]
-        });
-      }
+      let desc = data.fields.description[0];
+      desc = desc.charAt(0).toUpperCase() + desc.slice(1);
+      this.setState({
+        id: data.id,
+        url: `https://www.alphafold.ebi.ac.uk/entry/${this.props.afId}`,
+        pdb: data.fields.pdb_url[0],
+        cif: data.fields.cif_url[0],
+        pae: data.fields.pae_doc_url[0],
+        pae_img_url: data.fields.pae_image_url[0],
+        description: desc,
+        scientific_name: data.fields.scientific_name[0]
+      });
     })
   }
 
@@ -80,8 +77,9 @@ class AlphaFoldDetails extends React.Component {
               { hasPae ? <li><a target="_blank" rel="noreferrer" href={this.state.pae} >Predicted aligned error</a></li> : null }
             </ul>
             <p>
-              Please refer to the <a target="_blank" rel="noreferrer" href="https://alphafold.com/faq#faq-7">AlphaFold FAQ</a>
-              for more information on the files and formats
+              <span>Please refer to the </span>
+              <a target="_blank" rel="noreferrer" href="https://alphafold.com/faq#faq-7">AlphaFold FAQ</a>
+              <span> for more information on the files and formats</span>
             </p>
           </>
       }

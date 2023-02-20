@@ -14,5 +14,5 @@ details.}
 Molstar shiny element
 }
 \examples{
-Molstar(pbdId="1LOL", dimensions=c(300, 300))
+Molstar(pbdId = "1LOL", dimensions = c(300, 300))
 }

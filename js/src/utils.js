@@ -28,7 +28,7 @@ export function retrieve_metadata(afId, fullQuery, callback) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      if (!!data.entries && data.entries.length > 0) {
+      if (data.entries && data.entries.length > 0) {
         const result = data.entries[0];
         callback(result)
       }

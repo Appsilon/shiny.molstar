@@ -29,33 +29,27 @@ shinyApp(
           " component."
         )
       )
-    ),
+    )
+    # START remove_from_sample_ui
+    ## Everything until the end of the tag is not shown when pressing the
+    ##  "Show minimal example code" button
+    ,
     #
     # Footer and Styling
     #
-    tags$footer(
-      tags$p(
-        actionButton("show", "Show source code")
-      ),
-      tags$p(
-        "Alpha Fold example from ",
-        tags$a(
-          href = "https://appsilon.github.io/shiny.molstar",
-          "shiny.molstar"
-        ),
-        "package"
-      ),
-      tags$p(
-        "Developed with ❤️ by",
-        tags$a(
-          href = "https://appsilon.github.io/shiny.molstar", "Appsilon"
-        )
-      )
-    ),
-    tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
+    shiny.molstar:::footer_tag()
+    # END remove_from_sample_ui
   ),
   server = function(input, output) {
+    # START remove_from_sample_server
+    ## Everything until the end of the tag is not shown when pressing the
+    ##  "Show minimal example code" button
     observeEvent(input$show, {
+      sample_code <- shiny.molstar:::get_sample_code(
+        c("remove_from_sample_ui", "remove_from_sample_server"),
+        "examples/AlphaFoldDetails.R"
+      )
+
       showModal(modalDialog(
         title = "Source code for example",
         size = "l",
@@ -64,12 +58,7 @@ shinyApp(
           paste(
             c(
               "```{r}",
-              readLines(
-                system.file(
-                  "examples/AlphaFoldDetails.R",
-                  package = "shiny.molstar"
-                )
-              ),
+              sample_code,
               "```"
             ),
             collapse = HTML("\n")
@@ -77,5 +66,6 @@ shinyApp(
         )
       ))
     })
+    # END remove_from_sample_server
   }
 )

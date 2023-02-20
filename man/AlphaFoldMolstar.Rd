@@ -15,5 +15,5 @@ AlphaFoldMolstar shiny element
 }
 \examples{
 url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
-AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions=c(300, 300))
+AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions = c(300, 300))
 }

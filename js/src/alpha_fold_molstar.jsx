@@ -14,13 +14,10 @@ class AlphaFoldMolstar extends React.Component {
 
   componentDidMount() {
     retrieve_metadata(this.props.afId, false, data => {
-      if (!!data.entries && data.entries.length > 0) {
-        const result = data.entries[0];
-        this.setState({
-          id: result.id,
-          pdb: result.fields.pdb_url[0],
-        });
-      }
+      this.setState({
+        id: data.id,
+        pdb: data.fields.pdb_url[0],
+      });
     })
   }
 
