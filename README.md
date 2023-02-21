@@ -3,7 +3,7 @@
 > _R Shiny wrapper for Mol* (/'molstar/) - A visualization toolkit of large-scale molecular data_
 
 <!-- badges: start -->
-[![R-CMD-checks](https://github.com/Appsilon/shiny.molstar/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/Appsilon/shiny.molstar/actions/workflows/r-cmd-check.yml)
+[![R-CMD-checks](https://github.com/Appsilon/shiny.molstar/actions/workflows/ci.yml/badge.svg)](https://github.com/Appsilon/shiny.molstar/actions/workflows/ci.yml)
 <!-- badges: end -->
 
 Based on [Mol*](https://molstar.org) (/'molstar/) and powered by [shiny.react](https://appsilon.github.io/shiny.react/)

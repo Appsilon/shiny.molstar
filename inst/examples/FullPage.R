@@ -2,13 +2,13 @@ library(shiny)
 library(shiny.molstar)
 
 shinyApp(
-  ui = tagList(
+  ui = basicPage(
     tags$style(HTML("html, body { margin: 0; }")),
     Molstar(
       pdbId = "1LOL",
       useInterface = TRUE,
       showControls = TRUE,
-      showAxis = TRUE
+      showAxes = TRUE
     )
   ),
   server = function(input, output) {

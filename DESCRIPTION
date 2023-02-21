@@ -14,15 +14,16 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   htmltools,
+  glue,
   shiny.react
 Suggests:
     knitr,
     lintr,
-    glue,
     shiny,
     mockery (>= 0.4.3),
     rcmdcheck,
     rmarkdown,
+    markdown,
     sessioninfo,
     spelling,
     testthat (>= 3.0.0)

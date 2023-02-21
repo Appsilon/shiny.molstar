@@ -1,40 +1,61 @@
-library(glue)
 library(shiny)
 library(shiny.molstar)
+library(glue)
 
 pdbId <- "1LOL" # nolint: linter_name
 
 shinyApp(
-  ui = tagList(
+  ui = basicPage(
     tags$main(
-      h2(glue("Molecular visualization \"{pdbId}\"")),
-      Molstar(
-        pdbId = pdbId,
-        dimensions = c(300, 300),
-        showAxis = TRUE
+      tags$div(
+        class = "box",
+        Molstar(
+          pdbId = pdbId,
+          dimensions = c(300, 300),
+          showAxes = TRUE
+        ),
+        tags$hr(),
+        tags$span(glue("Molecular visualization of pdbID: \"{pdbId}\""))
       )
-    ),
+    )
+    # START remove_from_sample_ui
+    #
+    # # Everything until the end of the tag is not shown when pressing the
+    # #  "Show minimal example code" button
+    ,
     #
     # Footer and Styling
     #
-    tags$footer(
-      tags$p(
-        "Minimal example from ",
-        tags$a(
-          href = "https://appsilon.github.io/shiny.molstar",
-          "shiny.molstar"
-        ),
-        "package"
-      ),
-      tags$p(
-        "Developed with ❤️ by",
-        tags$a(
-          href = "https://appsilon.github.io/shiny.molstar", "Appsilon"
-        )
-      )
-    ),
-    tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
+    shiny.molstar:::footer_tag()
+    # END remove_from_sample_ui
   ),
   server = function(input, output) {
+    # START remove_from_sample_server
+    #
+    # # Everything until the end of the tag is not shown when pressing the
+    # #  "Show minimal example code" button
+    observeEvent(input$show, {
+      sample_code <- shiny.molstar:::get_sample_code(
+        c("remove_from_sample_ui", "remove_from_sample_server"),
+        "examples/Minimal.R"
+      )
+
+      showModal(modalDialog(
+        title = "Source code for example",
+        size = "l",
+        easyClose = TRUE,
+        includeMarkdown(
+          paste(
+            c(
+              "```{r}",
+              sample_code,
+              "```"
+            ),
+            collapse = shiny::HTML("\n")
+          )
+        )
+      ))
+    })
+    # END remove_from_sample_server
   }
 )

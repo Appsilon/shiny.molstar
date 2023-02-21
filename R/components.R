@@ -3,9 +3,7 @@ molstarDependency <- function() { # nolint: linter_name
     name = "molstar",
     version = "0.1.0",
     package = "shiny.molstar",
-    src = c(
-      "inst/www"
-    ),
+    src = "www",
     script = "shiny.molstar.min.js"
   )
 }
@@ -14,6 +12,17 @@ component <- function(name) {
   function(...) {
     shiny.react::reactElement(
       module = "molstar-react",
+      name = name,
+      props = shiny.react::asProps(...),
+      deps = molstarDependency()
+    )
+  }
+}
+
+custom_component <- function(name) {
+  function(...) {
+    shiny.react::reactElement(
+      module = "@/shiny.molstar",
       name = name,
       props = shiny.react::asProps(...),
       deps = molstarDependency()
@@ -34,5 +43,23 @@ NULL
 #' @inherit template params
 #' @export
 #' @examples
-#' shiny.molstar::Molstar(pbdId="1LOL", dimensions=c(300, 300))
+#' Molstar(pbdId = "1LOL", dimensions = c(300, 300))
 Molstar <- component("Molstar") # nolint: linter_name
+
+#' AlphaFoldMolstar shiny element
+#'
+#' @inherit template params
+#' @export
+#' @examples
+#' url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
+#' AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions = c(300, 300))
+AlphaFoldMolstar <- custom_component("AlphaFoldMolstar") # nolint: linter_name
+
+
+#' AlphaFoldDetails shiny element
+#'
+#' @inherit template params
+#' @export
+#' @examples
+#' AlphaFoldDetails(afId = "A0A1U8FD60", dimensions=c(300, 300))
+AlphaFoldDetails <- custom_component("AlphaFoldDetails") # nolint: linter_name
