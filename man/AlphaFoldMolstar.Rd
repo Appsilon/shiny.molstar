@@ -43,4 +43,6 @@ AlphaFoldMolstar shiny element
 }
 \examples{
 AlphaFoldMolstar(uniProtId = "A0A1U8FD60", dimensions = c(300, 300))
+
+AlphaFoldMolstar(uniProtId = "A0A1U8FD60", useInterface = TRUE)
 }
