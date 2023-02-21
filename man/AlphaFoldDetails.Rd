@@ -7,12 +7,18 @@
 AlphaFoldDetails(...)
 }
 \arguments{
-\item{...}{Component props and children. See the official Blueprint docs for
-details.}
+\item{afid}{a character string containing a UniProt id that is in the
+AlphaFold database.}
+
+\item{showFiles}{a logical value indicating if the download links to the
+files in the database should be shown in a div.}
+
+\item{showPae}{a logical value indicating if the predicted aligned
+error image should be shown.}
 }
 \description{
 AlphaFoldDetails shiny element
 }
 \examples{
-AlphaFoldDetails(afId = "A0A1U8FD60", dimensions=c(300, 300))
+AlphaFoldDetails(afId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
 }

@@ -2,7 +2,7 @@ library(shiny)
 library(shiny.molstar)
 library(glue)
 
-pdbId <- "1LOL" # nolint: linter_name
+pdbId <- "1y98" # nolint: linter_name
 
 shinyApp(
   ui = basicPage(
@@ -15,7 +15,13 @@ shinyApp(
           showAxes = TRUE
         ),
         tags$hr(),
-        tags$span(glue("Molecular visualization of pdbID: \"{pdbId}\""))
+        tags$span(
+          "Molecular visualization of pdbID:",
+          tags$a(
+            href = glue("https://www.ebi.ac.uk/pdbe/entry/pdb/{pdbId}"),
+            pdbId
+          )
+        )
       )
     )
     # START remove_from_sample_ui
