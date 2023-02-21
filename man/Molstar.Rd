@@ -53,8 +53,8 @@ A \code{pdbId} can be found in public databases such as:
 The \code{file} parameter is supported, but it should not be used in Shiny.
 }
 \examples{
-Molstar(pbdId = "1LOL", dimensions = c(300, 300))
-Molstar(pbdId = "1y98", dimensions = c(300, 300))
+Molstar(pdbId = "1LOL", dimensions = c(300, 300))
+Molstar(pdbId = "1y98", dimensions = c(300, 300))
 
 url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
 Molstar(url = url, dimensions = c(300, 300))

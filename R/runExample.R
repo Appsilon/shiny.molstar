@@ -9,8 +9,6 @@
 #' @param ... Additional arguments to pass to `shiny::runApp()`.
 #'
 #' @export
-#' @examples
-#' runExample("AlphaFoldDetails")
 runExample <- function(example = NULL, ...) {
   examples <- system.file(
     "examples",

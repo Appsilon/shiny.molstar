@@ -9,3 +9,4 @@
 ^pkgdown$
 ^renovate\.json
 ^\.whitesource
+^\.lintr$

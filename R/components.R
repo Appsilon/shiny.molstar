@@ -61,8 +61,8 @@ customComponent <- function(name) {
 #'
 #' @export
 #' @examples
-#' Molstar(pbdId = "1LOL", dimensions = c(300, 300))
-#' Molstar(pbdId = "1y98", dimensions = c(300, 300))
+#' Molstar(pdbId = "1LOL", dimensions = c(300, 300))
+#' Molstar(pdbId = "1y98", dimensions = c(300, 300))
 #'
 #' url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
 #' Molstar(url = url, dimensions = c(300, 300))
@@ -143,6 +143,8 @@ AlphaFoldMolstar <- function(
 #' files in the database should be shown in a div.
 #' @param showPae a logical value indicating if the predicted aligned
 #' error image should be shown.
+#' @param class character string for the class name to apply to the outer
+#' parent element.
 #'
 #' @export
 #' @examples

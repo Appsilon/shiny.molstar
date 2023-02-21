@@ -7,14 +7,13 @@
 runExample(example = NULL, ...)
 }
 \arguments{
-\item{example}{The name of the example to run, or \code{NULL} to retrieve the list of examples.}
+\item{example}{The name of the example to run, or \code{NULL} to retrieve the
+list of examples.}
 
 \item{...}{Additional arguments to pass to \code{shiny::runApp()}.}
 }
 \description{
 Launch a Shiny example app or list the available examples.
-Use \code{shiny.molstar::runExample("FullPage")} to run a showcase app with all the components.
-}
-\examples{
-runExample("AlphaFoldDetails")
+Use \code{shiny.molstar::runExample("FullPage")} to run a showcase app with all
+the components.
 }

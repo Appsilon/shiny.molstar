@@ -12,6 +12,9 @@ AlphaFoldDetails(
 )
 }
 \arguments{
+\item{class}{character string for the class name to apply to the outer
+parent element.}
+
 \item{uniProtId}{a character string containing a UniProt id that is in the
 AlphaFold database.}
 
