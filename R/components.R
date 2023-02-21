@@ -92,7 +92,7 @@ Molstar <- function(
 
 #' AlphaFoldMolstar shiny element
 #'
-#' @param afId a character string containing a UniProt id that is in the
+#' @param uniProtId a character string containing a UniProt id that is in the
 #' AlphaFold database.
 #' @param dimensions an integer vector indicating the dimensions of the
 #' visualization in pixels (`c(width, height`). By default the molstar
@@ -106,22 +106,27 @@ Molstar <- function(
 #' bottom left corner.
 #' @param class character string for the class name to apply to the outer
 #' parent element.
+#' @param useCif a logical value indicating if the CIF file should be used
+#' instead of the PDB (both are retrieved from Alpha Fold's database).
 #'
 #' @export
 #' @examples
-#' AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions = c(300, 300))
+#' AlphaFoldMolstar(uniProtId = "A0A1U8FD60", dimensions = c(300, 300))
+#'
+#' AlphaFoldMolstar(uniProtId = "A0A1U8FD60", useInterface = TRUE)
 AlphaFoldMolstar <- function(
     class = NULL,
-    afId = NULL,
+    uniProtId = NULL,
     dimensions = NULL,
     useInterface = FALSE,
     showControls = FALSE,
-    showAxes = FALSE
+    showAxes = FALSE,
+    useCif = FALSE
 ) {
   reactComponent <- customComponent("AlphaFoldMolstar")
   reactComponent(
     className = class,
-    afId = afId,
+    uniProtId = uniProtId,
     dimensions = dimensions,
     useInterface = useInterface,
     showControls = showControls,
@@ -132,7 +137,7 @@ AlphaFoldMolstar <- function(
 
 #' AlphaFoldDetails shiny element
 #'
-#' @param afId a character string containing a UniProt id that is in the
+#' @param uniProtId a character string containing a UniProt id that is in the
 #' AlphaFold database.
 #' @param showFiles a logical value indicating if the download links to the
 #' files in the database should be shown in a div.
@@ -141,17 +146,17 @@ AlphaFoldMolstar <- function(
 #'
 #' @export
 #' @examples
-#' AlphaFoldDetails(afId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
+#' AlphaFoldDetails(uniProtId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
 AlphaFoldDetails <- function(
     class = NULL,
-    afId = NULL,
+    uniProtId = NULL,
     showFiles = FALSE,
     showPae = FALSE
 ) {
   reactComponent <- customComponent("AlphaFoldDetails")
   reactComponent(
     className = class,
-    afId = afId,
+    uniProtId = uniProtId,
     showFiles = showFiles,
     showPae = showPae
   )

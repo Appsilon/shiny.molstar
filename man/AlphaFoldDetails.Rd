@@ -4,10 +4,15 @@
 \alias{AlphaFoldDetails}
 \title{AlphaFoldDetails shiny element}
 \usage{
-AlphaFoldDetails(class = NULL, afId = NULL, showFiles = FALSE, showPae = FALSE)
+AlphaFoldDetails(
+  class = NULL,
+  uniProtId = NULL,
+  showFiles = FALSE,
+  showPae = FALSE
+)
 }
 \arguments{
-\item{afId}{a character string containing a UniProt id that is in the
+\item{uniProtId}{a character string containing a UniProt id that is in the
 AlphaFold database.}
 
 \item{showFiles}{a logical value indicating if the download links to the
@@ -20,5 +25,5 @@ error image should be shown.}
 AlphaFoldDetails shiny element
 }
 \examples{
-AlphaFoldDetails(afId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
+AlphaFoldDetails(uniProtId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
 }

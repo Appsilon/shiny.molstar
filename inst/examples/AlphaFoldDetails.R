@@ -7,7 +7,7 @@ shinyApp(
       tags$div(
         class = "box",
         AlphaFoldDetails(
-          afId = "A0A1U8FD60",
+          uniProtId = "A0A1U8FD60",
           showFiles = TRUE,
           showPae = TRUE
         )
@@ -15,8 +15,9 @@ shinyApp(
       tags$div(
         class = "box",
         AlphaFoldMolstar(
-          afId = "A0A1U8FD60",
+          uniProtId = "A0A1U8FD60",
           showAxes = TRUE,
+          useCif = TRUE,
           dimensions = c(300, 300)
         ),
         tags$hr(),

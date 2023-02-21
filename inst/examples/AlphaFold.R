@@ -7,7 +7,7 @@ shinyApp(
       tags$div(
         class = "box",
         AlphaFoldMolstar(
-          afId = "A0A1U8FD60",
+          uniProtId = "A0A1U8FD60",
           showAxes = TRUE,
           dimensions = c(300, 300)
         ),

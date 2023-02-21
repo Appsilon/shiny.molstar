@@ -17,12 +17,12 @@ class AlphaFoldDetails extends React.Component {
   }
 
   componentDidMount() {
-    retrieve_metadata(this.props.afId, true, data => {
+    retrieve_metadata(this.props.uniProtId, true, data => {
       let desc = data.fields.description[0];
       desc = desc.charAt(0).toUpperCase() + desc.slice(1);
       this.setState({
         id: data.id,
-        url: `https://www.alphafold.ebi.ac.uk/entry/${this.props.afId}`,
+        url: `https://www.alphafold.ebi.ac.uk/entry/${this.props.uniProtId}`,
         pdb: data.fields.pdb_url[0],
         cif: data.fields.cif_url[0],
         pae: data.fields.pae_doc_url[0],
@@ -41,11 +41,11 @@ class AlphaFoldDetails extends React.Component {
     const hasPae = !!this.state.pae;
 
     return <div className="alphafold-details">
-      <h3>{hasDesc ? this.state.description : this.props.afId }</h3>
+      <h3>{hasDesc ? this.state.description : this.props.uniProtId }</h3>
       {
         !!this.state.description && <div className="uniprot details">
           <span className="label-detail">Uniprot:&nbsp;</span>
-          <span className="value">{this.props.afId}</span>
+          <span className="value">{this.props.uniProtId}</span>
         </div>
       }
       {
@@ -88,7 +88,7 @@ class AlphaFoldDetails extends React.Component {
 }
 
 AlphaFoldDetails.propTypes = {
-  afId: PropTypes.string.isRequired,
+  uniProtId: PropTypes.string.isRequired,
   showFiles: PropTypes.bool,
   showPae: PropTypes.bool,
 };
