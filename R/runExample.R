@@ -1,16 +1,22 @@
 #' Run example
 #'
 #' Launch a Shiny example app or list the available examples.
-#' Use `shiny.molstar::runExample("FullPage")` to run a showcase app with all the components.
+#' Use `shiny.molstar::runExample("FullPage")` to run a showcase app with all
+#' the components.
 #'
-#' @param example The name of the example to run, or `NULL` to retrieve the list of examples.
+#' @param example The name of the example to run, or `NULL` to retrieve the
+#' list of examples.
 #' @param ... Additional arguments to pass to `shiny::runApp()`.
 #'
 #' @export
 #' @examples
 #' runExample("AlphaFoldDetails")
 runExample <- function(example = NULL, ...) {
-  examples <- system.file("examples", package = utils::packageName(), mustWork = TRUE)
+  examples <- system.file(
+    "examples",
+    package = utils::packageName(),
+    mustWork = TRUE
+  )
   if (is.null(example)) {
     sub("\\.R$", "", list.files(examples))
   } else {
