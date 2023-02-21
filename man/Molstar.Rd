@@ -4,9 +4,20 @@
 \alias{Molstar}
 \title{Molstar shiny element}
 \usage{
-Molstar(...)
+Molstar(
+  class = NULL,
+  url = NULL,
+  pdbId = NULL,
+  dimensions = NULL,
+  useInterface = FALSE,
+  showControls = FALSE,
+  showAxes = FALSE
+)
 }
 \arguments{
+\item{class}{character string for the class name to apply to the outer
+parent element.}
+
 \item{url}{Load a structure by passing in the URL of the file.
 This file type needs to be supported by Molstar (\code{.pdb}, \code{.cif}).}
 
@@ -26,9 +37,6 @@ parameter to be also \code{TRUE}. Only recommended for large sizes.}
 
 \item{showAxes}{a logical value indicating if axes will appear in the
 bottom left corner.}
-
-\item{class}{character string for the class name to apply to the outer
-parent element.}
 }
 \description{
 Shiny.react component to show Molstar molecular visualizations.

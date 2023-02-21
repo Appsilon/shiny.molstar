@@ -4,10 +4,10 @@
 \alias{AlphaFoldDetails}
 \title{AlphaFoldDetails shiny element}
 \usage{
-AlphaFoldDetails(...)
+AlphaFoldDetails(class = NULL, afId = NULL, showFiles = FALSE, showPae = FALSE)
 }
 \arguments{
-\item{afid}{a character string containing a UniProt id that is in the
+\item{afId}{a character string containing a UniProt id that is in the
 AlphaFold database.}
 
 \item{showFiles}{a logical value indicating if the download links to the

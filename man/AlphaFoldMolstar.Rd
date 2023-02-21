@@ -4,10 +4,20 @@
 \alias{AlphaFoldMolstar}
 \title{AlphaFoldMolstar shiny element}
 \usage{
-AlphaFoldMolstar(...)
+AlphaFoldMolstar(
+  class = NULL,
+  afId = NULL,
+  dimensions = NULL,
+  useInterface = FALSE,
+  showControls = FALSE,
+  showAxes = FALSE
+)
 }
 \arguments{
-\item{afid}{a character string containing a UniProt id that is in the
+\item{class}{character string for the class name to apply to the outer
+parent element.}
+
+\item{afId}{a character string containing a UniProt id that is in the
 AlphaFold database.}
 
 \item{dimensions}{an integer vector indicating the dimensions of the
@@ -23,9 +33,6 @@ parameter to be also \code{TRUE}. Only recommended for large sizes.}
 
 \item{showAxes}{a logical value indicating if axes will appear in the
 bottom left corner.}
-
-\item{class}{character string for the class name to apply to the outer
-parent element.}
 }
 \description{
 AlphaFoldMolstar shiny element

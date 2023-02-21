@@ -3,7 +3,7 @@
 #' This function is not exported and shouldn't be used outside of the examples
 #'
 #' @return a common footer and css for the examples
-footer_tag <- function() {
+footerTag <- function() {
   shiny::tagList(
     shiny::tags$footer(
       shiny::tags$p(
@@ -54,29 +54,29 @@ footer_tag <- function() {
 #' ```
 #'
 #' @param lookup suffix of tag that surrounds code
-#' @param example_path path to file to load example from
+#' @param examplePath path to file to load example from
 #'
 #' @return a vector of lines of the sample code
-get_sample_code <- function(lookup, example_path) {
-  sample_code <- readLines(
+getSampleCode <- function(lookup, examplePath) {
+  sampleCode <- readLines(
     system.file(
-      example_path,
+      examplePath,
       package = "shiny.molstar"
     )
   )
 
   for (el in lookup) {
-    start_line <- which(grepl(glue::glue("# START {el}"), sample_code))
-    end_line <- which(grepl(glue::glue("# END {el}"), sample_code))
+    startLine <- which(grepl(glue::glue("# START {el}"), sampleCode))
+    endLine <- which(grepl(glue::glue("# END {el}"), sampleCode))
 
     # Only remove
     if (
-      length(start_line) > 0 &&
-      length(start_line) > 0 &&
-      start_line < end_line
+      length(startLine) > 0 &&
+      length(startLine) > 0 &&
+      startLine < endLine
     ) {
-      sample_code <- sample_code[-1 * seq(start_line, end_line)]
+      sampleCode <- sampleCode[-1 * seq(startLine, endLine)]
     }
   }
-  sample_code
+  sampleCode
 }

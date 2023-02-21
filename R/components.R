@@ -10,26 +10,21 @@ molstarDependency <- function() { # nolint: linter_name
 
 component <- function(name) {
   function(...) {
-    args <- list(...)
-    if (!is.null(args$class)) {
-      names(args) <- gsub("^class$", "className", names(args))
-    }
-
     shiny.react::reactElement(
       module = "molstar-react",
       name = name,
-      props = do.call(shiny.react::asProps, args),
+      props = shiny.react::asProps(...),
       deps = molstarDependency()
     )
   }
 }
 
-custom_component <- function(name) {
+customComponent <- function(name) {
   function(...) {
     shiny.react::reactElement(
       module = "@/shiny.molstar",
       name = name,
-      props = do.call(shiny.react::asProps, args),
+      props = shiny.react::asProps(...),
       deps = molstarDependency()
     )
   }
@@ -47,6 +42,8 @@ custom_component <- function(name) {
 #'
 #' The `file` parameter is supported, but it should not be used in Shiny.
 #'
+#' @param class character string for the class name to apply to the outer
+#' parent element.
 #' @param url Load a structure by passing in the URL of the file.
 #' This file type needs to be supported by Molstar (`.pdb`, `.cif`).
 #' @param pdbId Load an official PDB structure by supplying its 4 letter ID.
@@ -61,8 +58,6 @@ custom_component <- function(name) {
 #' parameter to be also `TRUE`. Only recommended for large sizes.
 #' @param showAxes a logical value indicating if axes will appear in the
 #' bottom left corner.
-#' @param class character string for the class name to apply to the outer
-#' parent element.
 #'
 #' @export
 #' @examples
@@ -74,11 +69,30 @@ custom_component <- function(name) {
 #'
 #' url2 <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.cif"
 #' Molstar(url = url2, dimensions = c(300, 300))
-Molstar <- component("Molstar") # nolint: linter_name
+Molstar <- function(
+  class = NULL,
+  url = NULL,
+  pdbId = NULL,
+  dimensions = NULL,
+  useInterface = FALSE,
+  showControls = FALSE,
+  showAxes = FALSE
+) {
+  react_component <- component("Molstar") # nolint: linter_name
+  react_component(
+    className = class,
+    url = url,
+    pdbId = pdbId,
+    dimensions = dimensions,
+    useInterface = useInterface,
+    showControls = showControls,
+    showAxes = showAxes
+  )
+}
 
 #' AlphaFoldMolstar shiny element
 #'
-#' @param afid a character string containing a UniProt id that is in the
+#' @param afId a character string containing a UniProt id that is in the
 #' AlphaFold database.
 #' @param dimensions an integer vector indicating the dimensions of the
 #' visualization in pixels (`c(width, height`). By default the molstar
@@ -96,12 +110,29 @@ Molstar <- component("Molstar") # nolint: linter_name
 #' @export
 #' @examples
 #' AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions = c(300, 300))
-AlphaFoldMolstar <- custom_component("AlphaFoldMolstar") # nolint: linter_name
+AlphaFoldMolstar <- function(
+    class = NULL,
+    afId = NULL,
+    dimensions = NULL,
+    useInterface = FALSE,
+    showControls = FALSE,
+    showAxes = FALSE
+) {
+  reactComponent <- customComponent("AlphaFoldMolstar")
+  reactComponent(
+    className = class,
+    afId = afId,
+    dimensions = dimensions,
+    useInterface = useInterface,
+    showControls = showControls,
+    showAxes = showAxes
+  )
+}
 
 
 #' AlphaFoldDetails shiny element
 #'
-#' @param afid a character string containing a UniProt id that is in the
+#' @param afId a character string containing a UniProt id that is in the
 #' AlphaFold database.
 #' @param showFiles a logical value indicating if the download links to the
 #' files in the database should be shown in a div.
@@ -111,4 +142,17 @@ AlphaFoldMolstar <- custom_component("AlphaFoldMolstar") # nolint: linter_name
 #' @export
 #' @examples
 #' AlphaFoldDetails(afId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
-AlphaFoldDetails <- custom_component("AlphaFoldDetails") # nolint: linter_name
+AlphaFoldDetails <- function(
+    class = NULL,
+    afId = NULL,
+    showFiles = FALSE,
+    showPae = FALSE
+) {
+  reactComponent <- customComponent("AlphaFoldDetails")
+  reactComponent(
+    className = class,
+    afId = afId,
+    showFiles = showFiles,
+    showPae = showPae
+  )
+}

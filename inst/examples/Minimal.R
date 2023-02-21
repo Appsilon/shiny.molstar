@@ -32,7 +32,7 @@ shinyApp(
     #
     # Footer and Styling
     #
-    shiny.molstar:::footer_tag()
+    shiny.molstar:::footerTag()
     # END remove_from_sample_ui
   ),
   server = function(input, output) {
@@ -41,7 +41,7 @@ shinyApp(
     # # Everything until the end of the tag is not shown when pressing the
     # #  "Show minimal example code" button
     observeEvent(input$show, {
-      sample_code <- shiny.molstar:::get_sample_code(
+      sampleCode <- shiny.molstar:::getSampleCode(
         c("remove_from_sample_ui", "remove_from_sample_server"),
         "examples/Minimal.R"
       )
@@ -54,7 +54,7 @@ shinyApp(
           paste(
             c(
               "```{r}",
-              sample_code,
+              sampleCode,
               "```"
             ),
             collapse = shiny::HTML("\n")
