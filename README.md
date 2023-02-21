@@ -42,6 +42,8 @@ To learn about the Mol* language, follow the [Viewer documentation](https://mols
 
 ## Examples
 
+### Full page example
+
 Creating a full page viewer on a sample molecule _(example also available at `inst/examples/FullPage.R`)_
 
 ```
@@ -64,6 +66,19 @@ shinyApp(
 ```
 
 ![Full page example](man/examples/example.gif)
+
+### Using AlphaFold database and details
+
+Running an example from the package _(located at `inst/examples/AlphaFoldDetails.R`)_.
+
+You can click on the button on the bottom of the example to get the minima code to 
+reproduce the same Shiny application _(unstyled and without the footer)_.
+
+```
+runApp(system.file('examples/AlphaFoldDetails.R', package = "shiny.molstar"))
+```
+
+![AlphaFold with details](man/examples/example2.gif)
 
 ## Appsilon
 
