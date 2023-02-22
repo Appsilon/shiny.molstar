@@ -119,14 +119,14 @@ Molstar <- function(
 #'
 #' AlphaFoldMolstar(uniProtId = "A0A1U8FD60", useInterface = TRUE)
 AlphaFoldMolstar <- function(
-    class = NULL,
-    uniProtId = NULL,
-    dimensions = NULL,
-    useInterface = FALSE,
-    showControls = FALSE,
-    showAxes = FALSE,
-    useCif = FALSE,
-    ...
+  class = NULL,
+  uniProtId = NULL,
+  dimensions = NULL,
+  useInterface = FALSE,
+  showControls = FALSE,
+  showAxes = FALSE,
+  useCif = FALSE,
+  ...
 ) {
   reactComponent <- customComponent("AlphaFoldMolstar")
   reactComponent(
@@ -157,11 +157,11 @@ AlphaFoldMolstar <- function(
 #' @examples
 #' AlphaFoldDetails(uniProtId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
 AlphaFoldDetails <- function(
-    class = NULL,
-    uniProtId = NULL,
-    showFiles = FALSE,
-    showPae = FALSE,
-    ...
+  class = NULL,
+  uniProtId = NULL,
+  showFiles = FALSE,
+  showPae = FALSE,
+  ...
 ) {
   reactComponent <- customComponent("AlphaFoldDetails")
   reactComponent(
