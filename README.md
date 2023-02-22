@@ -73,7 +73,7 @@ shinyApp(
 )
 ```
 
-![Full page example](man/examples/example.gif)
+![Full page example](man/figures/example.gif)
 
 ### Using AlphaFold database and details
 
@@ -85,7 +85,7 @@ You can click on the button on the bottom of the example to get the minimal code
 shiny.molstar::runExample("AlphaFoldDetails")
 ```
 
-![AlphaFold with details](man/examples/example2.gif)
+![AlphaFold with details](man/figures/example2.gif)
 
 ## Appsilon
 
