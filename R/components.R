@@ -1,4 +1,4 @@
-molstarDependency <- function() { # nolint: linter_name
+molstarDependency <- function() {
   htmltools::htmlDependency(
     name = "molstar",
     version = "0.1.0",
@@ -58,6 +58,7 @@ customComponent <- function(name) {
 #' parameter to be also `TRUE`. Only recommended for large sizes.
 #' @param showAxes a logical value indicating if axes will appear in the
 #' bottom left corner.
+#' @param ... Component other props and children.
 #'
 #' @export
 #' @examples
@@ -76,17 +77,19 @@ Molstar <- function(
   dimensions = NULL,
   useInterface = FALSE,
   showControls = FALSE,
-  showAxes = FALSE
+  showAxes = FALSE,
+  ...
 ) {
-  react_component <- component("Molstar") # nolint: linter_name
-  react_component(
+  reactComponent <- component("Molstar")
+  reactComponent(
     className = class,
     url = url,
     pdbId = pdbId,
     dimensions = dimensions,
     useInterface = useInterface,
     showControls = showControls,
-    showAxes = showAxes
+    showAxes = showAxes,
+    ...
   )
 }
 
@@ -108,6 +111,7 @@ Molstar <- function(
 #' parent element.
 #' @param useCif a logical value indicating if the CIF file should be used
 #' instead of the PDB (both are retrieved from Alpha Fold's database).
+#' @param ... Component other props and children.
 #'
 #' @export
 #' @examples
@@ -121,7 +125,8 @@ AlphaFoldMolstar <- function(
     useInterface = FALSE,
     showControls = FALSE,
     showAxes = FALSE,
-    useCif = FALSE
+    useCif = FALSE,
+    ...
 ) {
   reactComponent <- customComponent("AlphaFoldMolstar")
   reactComponent(
@@ -130,7 +135,8 @@ AlphaFoldMolstar <- function(
     dimensions = dimensions,
     useInterface = useInterface,
     showControls = showControls,
-    showAxes = showAxes
+    showAxes = showAxes,
+    ...
   )
 }
 
@@ -145,6 +151,7 @@ AlphaFoldMolstar <- function(
 #' error image should be shown.
 #' @param class character string for the class name to apply to the outer
 #' parent element.
+#' @param ... Component other props and children.
 #'
 #' @export
 #' @examples
@@ -153,7 +160,8 @@ AlphaFoldDetails <- function(
     class = NULL,
     uniProtId = NULL,
     showFiles = FALSE,
-    showPae = FALSE
+    showPae = FALSE,
+    ...
 ) {
   reactComponent <- customComponent("AlphaFoldDetails")
   reactComponent(

@@ -11,7 +11,8 @@ AlphaFoldMolstar(
   useInterface = FALSE,
   showControls = FALSE,
   showAxes = FALSE,
-  useCif = FALSE
+  useCif = FALSE,
+  ...
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ bottom left corner.}
 
 \item{useCif}{a logical value indicating if the CIF file should be used
 instead of the PDB (both are retrieved from Alpha Fold's database).}
+
+\item{...}{Component other props and children.}
 }
 \description{
 AlphaFoldMolstar shiny element

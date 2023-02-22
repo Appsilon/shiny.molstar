@@ -11,7 +11,8 @@ Molstar(
   dimensions = NULL,
   useInterface = FALSE,
   showControls = FALSE,
-  showAxes = FALSE
+  showAxes = FALSE,
+  ...
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ parameter to be also \code{TRUE}. Only recommended for large sizes.}
 
 \item{showAxes}{a logical value indicating if axes will appear in the
 bottom left corner.}
+
+\item{...}{Component other props and children.}
 }
 \description{
 Shiny.react component to show Molstar molecular visualizations.

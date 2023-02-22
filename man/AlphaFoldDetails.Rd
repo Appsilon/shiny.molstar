@@ -8,7 +8,8 @@ AlphaFoldDetails(
   class = NULL,
   uniProtId = NULL,
   showFiles = FALSE,
-  showPae = FALSE
+  showPae = FALSE,
+  ...
 )
 }
 \arguments{
@@ -23,6 +24,8 @@ files in the database should be shown in a div.}
 
 \item{showPae}{a logical value indicating if the predicted aligned
 error image should be shown.}
+
+\item{...}{Component other props and children.}
 }
 \description{
 AlphaFoldDetails shiny element

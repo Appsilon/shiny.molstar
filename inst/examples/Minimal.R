@@ -2,7 +2,7 @@ library(shiny)
 library(shiny.molstar)
 library(glue)
 
-pdbId <- "1y98" # nolint: linter_name
+pdbId <- "1y98"
 
 shinyApp(
   ui = basicPage(
