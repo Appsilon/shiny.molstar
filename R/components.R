@@ -1,3 +1,19 @@
+#'
+#' @param class character string for the class name to apply to the outer
+#' parent element.
+#' @param dimensions an integer vector indicating the dimensions of the
+#' visualization in pixels (`c(width, height`). By default the molstar
+#' plugin will take up the full screen.
+#' @param useInterface a logical value indicating if the full Molstar
+#' interface will be used around the core canvas.
+#' @param showControls a logical value indicating if the controls will be
+#' shown around the sides of the interface. It needs the `useInterface`
+#' parameter to be also `TRUE`. Only recommended for large sizes.
+#' @param showAxes a logical value indicating if axes will appear in the
+#' bottom left corner.
+#' @param ... Component other props and children.
+#' @name MolstarComponent
+
 molstarDependency <- function() {
   htmltools::htmlDependency(
     name = "molstar",
@@ -40,25 +56,14 @@ customComponent <- function(name) {
 #'  * https://www.ebi.ac.uk/pdbe/entry/search/index/
 #'  * https://www.rcsb.org/
 #'
-#' The `file` parameter is supported, but it should not be used in Shiny.
+#' The `file` parameter is supported by the react library, but it should not
+#' be used in Shiny.
 #'
-#' @param class character string for the class name to apply to the outer
-#' parent element.
 #' @param url Load a structure by passing in the URL of the file.
 #' This file type needs to be supported by Molstar (`.pdb`, `.cif`).
 #' @param pdbId Load an official PDB structure by supplying its 4 letter ID.
 #' See the details for example databses.
-#' @param dimensions an integer vector indicating the dimensions of the
-#' visualization in pixels (`c(width, height`). By default the molstar
-#' plugin will take up the full screen.
-#' @param useInterface a logical value indicating if the full Molstar
-#' interface will be used around the core canvas.
-#' @param showControls a logical value indicating if the controls will be
-#' shown around the sides of the interface. It needs the `useInterface`
-#' parameter to be also `TRUE`. Only recommended for large sizes.
-#' @param showAxes a logical value indicating if axes will appear in the
-#' bottom left corner.
-#' @param ... Component other props and children.
+#' @inheritParams MolstarComponent
 #'
 #' @export
 #' @examples
@@ -97,21 +102,9 @@ Molstar <- function(
 #'
 #' @param uniProtId a character string containing a UniProt id that is in the
 #' AlphaFold database.
-#' @param dimensions an integer vector indicating the dimensions of the
-#' visualization in pixels (`c(width, height`). By default the molstar
-#' plugin will take up the full screen.
-#' @param useInterface a logical value indicating if the full Molstar
-#' interface will be used around the core canvas.
-#' @param showControls a logical value indicating if the controls will be
-#' shown around the sides of the interface. It needs the `useInterface`
-#' parameter to be also `TRUE`. Only recommended for large sizes.
-#' @param showAxes a logical value indicating if axes will appear in the
-#' bottom left corner.
-#' @param class character string for the class name to apply to the outer
-#' parent element.
 #' @param useCif a logical value indicating if the CIF file should be used
 #' instead of the PDB (both are retrieved from Alpha Fold's database).
-#' @param ... Component other props and children.
+#' @inheritParams MolstarComponent
 #'
 #' @export
 #' @examples

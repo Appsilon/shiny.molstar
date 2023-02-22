@@ -53,7 +53,8 @@ A \code{pdbId} can be found in public databases such as:
 \item https://www.rcsb.org/
 }
 
-The \code{file} parameter is supported, but it should not be used in Shiny.
+The \code{file} parameter is supported by the react library, but it should not
+be used in Shiny.
 }
 \examples{
 Molstar(pdbId = "1LOL", dimensions = c(300, 300))
