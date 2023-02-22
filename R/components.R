@@ -85,6 +85,17 @@ Molstar <- function(
   showAxes = FALSE,
   ...
 ) {
+  checkmate::assert(
+    checkmate::check_string(pdbId),
+    checkmate::check_string(url),
+    combine = "or"
+  )
+  checkmate::expect_string(class, null.ok = TRUE)
+  checkmate::expect_numeric(dimensions, len = 2, null.ok = TRUE)
+  checkmate::expect_flag(useInterface, null.ok = TRUE)
+  checkmate::expect_flag(showControls, null.ok = TRUE)
+  checkmate::expect_flag(showAxes, null.ok = TRUE)
+
   reactComponent <- component("Molstar")
   reactComponent(
     className = class,
@@ -121,6 +132,14 @@ AlphaFoldMolstar <- function(
   useCif = FALSE,
   ...
 ) {
+  checkmate::expect_string(uniProtId)
+  checkmate::expect_string(class, null.ok = TRUE)
+  checkmate::expect_numeric(dimensions, len = 2, null.ok = TRUE)
+  checkmate::expect_flag(useInterface, null.ok = TRUE)
+  checkmate::expect_flag(showAxes, null.ok = TRUE)
+  checkmate::expect_flag(showControls, null.ok = TRUE)
+  checkmate::expect_flag(useCif, null.ok = TRUE)
+
   reactComponent <- customComponent("AlphaFoldMolstar")
   reactComponent(
     className = class,
@@ -156,6 +175,11 @@ AlphaFoldDetails <- function(
   showPae = FALSE,
   ...
 ) {
+  checkmate::expect_string(uniProtId)
+  checkmate::expect_string(class, null.ok = TRUE)
+  checkmate::expect_flag(showFiles, null.ok = TRUE)
+  checkmate::expect_flag(showPae, null.ok = TRUE)
+
   reactComponent <- customComponent("AlphaFoldDetails")
   reactComponent(
     className = class,

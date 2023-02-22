@@ -15,7 +15,8 @@ LazyData: true
 Imports:
   htmltools,
   glue,
-  shiny.react
+  shiny.react,
+  checkmate
 Suggests:
     knitr,
     lintr,
