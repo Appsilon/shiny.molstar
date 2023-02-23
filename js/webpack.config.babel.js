@@ -5,12 +5,9 @@ const config = {
   mode: 'production',
   entry: './src/index.js',
 
-  devtool: "source-map",
-
   output: {
     path: path.join(__dirname, '..', 'inst', 'www'),
-    filename: 'shiny.molstar.min.js',
-    sourceMapFilename: "index.js.map"
+    filename: 'shiny.molstar.min.js'
   },
   optimization: {
     minimize: true
@@ -44,7 +41,7 @@ const config = {
   },
   performance: {
     maxAssetSize: 2597152, // 2.5 MiB
-    maxEntrypointSize: 2597152, // 2 MiB
+    maxEntrypointSize: 2597152, // 2.5 MiB
   },
   stats: { colors: true },
 };
