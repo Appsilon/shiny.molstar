@@ -14,13 +14,13 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   htmltools,
-  glue,
   shiny.react,
   checkmate
 Suggests:
     knitr,
     lintr,
     shiny,
+    glue,
     mockery (>= 0.4.3),
     rcmdcheck,
     rmarkdown,

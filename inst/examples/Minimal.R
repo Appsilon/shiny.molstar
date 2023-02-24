@@ -18,7 +18,7 @@ shinyApp(
         tags$span(
           "Molecular visualization of pdbID:",
           tags$a(
-            href = glue("https://www.ebi.ac.uk/pdbe/entry/pdb/{pdbId}"),
+            href = glue::glue("https://www.ebi.ac.uk/pdbe/entry/pdb/{pdbId}"),
             pdbId
           )
         )

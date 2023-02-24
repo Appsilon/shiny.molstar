@@ -9,7 +9,10 @@ footerTag <- function() {
       shiny::tags$p(
         "See this and more examples at",
         shiny::tags$a(
-          href = "https://github.com/Appsilon/shiny.molstar/tree/main/inst/examples",
+          href = paste0(
+            "https://github.com/Appsilon/shiny.molstar/",
+            "tree/main/inst/examples"
+          ),
           "shiny.molstar/inst/examples"
         )
       ),
