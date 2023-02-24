@@ -14,6 +14,4 @@ list of examples.}
 }
 \description{
 Launch a Shiny example app or list the available examples.
-Use \code{shiny.molstar::runExample("FullPage")} to run a showcase app with all
-the components.
 }

@@ -26,7 +26,7 @@ This file type needs to be supported by Molstar (\code{.pdb}, \code{.cif}).}
 See the details for example databses.}
 
 \item{dimensions}{an integer vector indicating the dimensions of the
-visualization in pixels (\verb{c(width, height}). By default the molstar
+visualization in pixels (\code{c(width, height)}). By default the molstar
 plugin will take up the full screen.}
 
 \item{useInterface}{a logical value indicating if the full Molstar
