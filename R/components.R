@@ -2,7 +2,7 @@
 #' @param class character string for the class name to apply to the outer
 #' parent element.
 #' @param dimensions an integer vector indicating the dimensions of the
-#' visualization in pixels (`c(width, height`). By default the molstar
+#' visualization in pixels (`c(width, height)`). By default the molstar
 #' plugin will take up the full screen.
 #' @param useInterface a logical value indicating if the full Molstar
 #' interface will be used around the core canvas.
