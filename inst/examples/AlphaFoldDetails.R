@@ -30,43 +30,9 @@ shinyApp(
           " component."
         )
       )
-    )
-    # START remove_from_sample_ui
-    ## Everything until the end of the tag is not shown when pressing the
-    ##  "Show minimal example code" button
-    ,
-    #
-    # Footer and Styling
-    #
+    ),
     shiny.molstar:::footerTag()
-    # END remove_from_sample_ui
   ),
   server = function(input, output) {
-    # START remove_from_sample_server
-    ## Everything until the end of the tag is not shown when pressing the
-    ##  "Show minimal example code" button
-    observeEvent(input$show, {
-      sampleCode <- shiny.molstar:::getSampleCode(
-        c("remove_from_sample_ui", "remove_from_sample_server"),
-        "examples/AlphaFoldDetails.R"
-      )
-
-      showModal(modalDialog(
-        title = "Source code for example",
-        size = "l",
-        easyClose = TRUE,
-        includeMarkdown(
-          paste(
-            c(
-              "```{r}",
-              sampleCode,
-              "```"
-            ),
-            collapse = shiny::HTML("\n")
-          )
-        )
-      ))
-    })
-    # END remove_from_sample_server
   }
 )
