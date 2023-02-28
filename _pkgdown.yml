@@ -25,9 +25,6 @@ navbar:
     - icon: fa-home
       href: index.html
       text: "Start"
-    - icon: fa-university
-      text: "Tutorial"
-      href: articles/intro.html
     - icon: fa-file-code-o
       text: "Reference"
       href: reference/index.html

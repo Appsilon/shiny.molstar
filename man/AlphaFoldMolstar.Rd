@@ -4,16 +4,48 @@
 \alias{AlphaFoldMolstar}
 \title{AlphaFoldMolstar shiny element}
 \usage{
-AlphaFoldMolstar(...)
+AlphaFoldMolstar(
+  class = NULL,
+  uniProtId = NULL,
+  dimensions = NULL,
+  useInterface = FALSE,
+  showControls = FALSE,
+  showAxes = FALSE,
+  useCif = FALSE,
+  ...
+)
 }
 \arguments{
-\item{...}{Component props and children. See the official Blueprint docs for
-details.}
+\item{class}{character string for the class name to apply to the outer
+parent element.}
+
+\item{uniProtId}{a character string containing a UniProt id that is in the
+AlphaFold database.}
+
+\item{dimensions}{an integer vector indicating the dimensions of the
+visualization in pixels (\code{c(width, height)}). By default the molstar
+plugin will take up the full screen.}
+
+\item{useInterface}{a logical value indicating if the full Molstar
+interface will be used around the core canvas.}
+
+\item{showControls}{a logical value indicating if the controls will be
+shown around the sides of the interface. It needs the \code{useInterface}
+parameter to be also \code{TRUE}. Only recommended for large sizes.}
+
+\item{showAxes}{a logical value indicating if axes will appear in the
+bottom left corner.}
+
+\item{useCif}{a logical value indicating if the CIF file should be used
+instead of the PDB (both are retrieved from Alpha Fold's database).}
+
+\item{...}{Component other props and children.}
 }
 \description{
 AlphaFoldMolstar shiny element
 }
 \examples{
-url <- "https://alphafold.ebi.ac.uk/files/AF-A0A1U8FD60-F1-model_v4.pdb"
-AlphaFoldMolstar(afId = "A0A1U8FD60", dimensions = c(300, 300))
+AlphaFoldMolstar(uniProtId = "A0A1U8FD60", dimensions = c(300, 300))
+
+AlphaFoldMolstar(uniProtId = "A0A1U8FD60", useInterface = TRUE)
 }

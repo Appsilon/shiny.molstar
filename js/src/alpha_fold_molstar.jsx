@@ -13,23 +13,26 @@ class AlphaFoldMolstar extends React.Component {
   }
 
   componentDidMount() {
-    retrieve_metadata(this.props.afId, false, data => {
+    retrieve_metadata(this.props.uniProtId, false, data => {
       this.setState({
         id: data.id,
         pdb: data.fields.pdb_url[0],
+        cif: data.fields.cif_url[0],
       });
     })
   }
 
   render() {
+    const url = this.props.useCif ? this.state.cif : this.state.pdb;
     return <>
       { !!this.state.error && <div className="error">{this.state.error}</div> }
-      <Molstar url={this.state.pdb} {...this.props} />
+      <Molstar url={url} {...this.props} />
     </>;
   }
 }
 
 AlphaFoldMolstar.propTypes = Molstar.propTypes;
-AlphaFoldMolstar.propTypes.afId = PropTypes.string.isRequired;
+AlphaFoldMolstar.propTypes.uniProtId = PropTypes.string.isRequired;
+AlphaFoldMolstar.propTypes.useCif = PropTypes.bool;
 
 export default AlphaFoldMolstar;

@@ -3,3 +3,4 @@
 export(AlphaFoldDetails)
 export(AlphaFoldMolstar)
 export(Molstar)
+export(runExample)

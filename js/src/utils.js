@@ -6,18 +6,18 @@
 //
 // Information about AlphaFold pavailable metadata at:
 //   https://www.ebi.ac.uk/ebisearch/metadata.ebi?db=alphafold
-export function retrieve_metadata(afId, fullQuery, callback) {
+export function retrieve_metadata(uniProtId, fullQuery, callback) {
   const baseUrl = "https://www.ebi.ac.uk/ebisearch/ws/rest/alphafold" +
-    `/entry/${afId}`;
+    `/entry/${uniProtId}`;
 
   let params = {
     format: "json",
-    fields: ["pdb_url"],
+    fields: ["pdb_url", "cif_url"],
   };
 
   if (fullQuery) {
     params.fields = params.fields.concat([
-      "name", "description", "scientific_name", "gene", "cif_url",
+      "name", "description", "scientific_name", "gene",
       "pae_doc_url", "pae_image_url"
     ]);
   }
@@ -30,7 +30,7 @@ export function retrieve_metadata(afId, fullQuery, callback) {
     .then(data => {
       if (data.entries && data.entries.length > 0) {
         const result = data.entries[0];
-        callback(result)
+        callback(result);
       }
     });
 }

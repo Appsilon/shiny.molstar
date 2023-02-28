@@ -2,7 +2,7 @@ library(shiny)
 library(shiny.molstar)
 library(glue)
 
-pdbId <- "1LOL" # nolint: linter_name
+pdbId <- "1y98"
 
 shinyApp(
   ui = basicPage(
@@ -15,47 +15,17 @@ shinyApp(
           showAxes = TRUE
         ),
         tags$hr(),
-        tags$span(glue("Molecular visualization of pdbID: \"{pdbId}\""))
-      )
-    )
-    # START remove_from_sample_ui
-    #
-    # # Everything until the end of the tag is not shown when pressing the
-    # #  "Show minimal example code" button
-    ,
-    #
-    # Footer and Styling
-    #
-    shiny.molstar:::footer_tag()
-    # END remove_from_sample_ui
-  ),
-  server = function(input, output) {
-    # START remove_from_sample_server
-    #
-    # # Everything until the end of the tag is not shown when pressing the
-    # #  "Show minimal example code" button
-    observeEvent(input$show, {
-      sample_code <- shiny.molstar:::get_sample_code(
-        c("remove_from_sample_ui", "remove_from_sample_server"),
-        "examples/Minimal.R"
-      )
-
-      showModal(modalDialog(
-        title = "Source code for example",
-        size = "l",
-        easyClose = TRUE,
-        includeMarkdown(
-          paste(
-            c(
-              "```{r}",
-              sample_code,
-              "```"
-            ),
-            collapse = shiny::HTML("\n")
+        tags$span(
+          "Molecular visualization of pdbID:",
+          tags$a(
+            href = glue::glue("https://www.ebi.ac.uk/pdbe/entry/pdb/{pdbId}"),
+            pdbId
           )
         )
-      ))
-    })
-    # END remove_from_sample_server
+      )
+    ),
+    shiny.molstar:::footerTag()
+  ),
+  server = function(input, output) {
   }
 )

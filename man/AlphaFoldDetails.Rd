@@ -4,15 +4,32 @@
 \alias{AlphaFoldDetails}
 \title{AlphaFoldDetails shiny element}
 \usage{
-AlphaFoldDetails(...)
+AlphaFoldDetails(
+  class = NULL,
+  uniProtId = NULL,
+  showFiles = FALSE,
+  showPae = FALSE,
+  ...
+)
 }
 \arguments{
-\item{...}{Component props and children. See the official Blueprint docs for
-details.}
+\item{class}{character string for the class name to apply to the outer
+parent element.}
+
+\item{uniProtId}{a character string containing a UniProt id that is in the
+AlphaFold database.}
+
+\item{showFiles}{a logical value indicating if the download links to the
+files in the database should be shown in a div.}
+
+\item{showPae}{a logical value indicating if the predicted aligned
+error image should be shown.}
+
+\item{...}{Component other props and children.}
 }
 \description{
 AlphaFoldDetails shiny element
 }
 \examples{
-AlphaFoldDetails(afId = "A0A1U8FD60", dimensions=c(300, 300))
+AlphaFoldDetails(uniProtId = "A0A1U8FD60", showPae = TRUE, showFiles = TRUE)
 }
