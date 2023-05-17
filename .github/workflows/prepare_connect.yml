@@ -106,6 +106,7 @@ jobs:
         run: |
           renv::init()
           renv::install("rsconnect")
+          renv::snapshot()
 
       - name: Cache packages
         uses: actions/cache@v3
@@ -132,7 +133,7 @@ jobs:
           do
 
             dest=$(basename "$value")
-            cd $dest && Rscript -e "rsconnect::writeManifest()"
+            Rscript -e "rsconnect::writeManifest(appDir = '$dest')"
 
           done
 
