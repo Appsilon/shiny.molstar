@@ -79,8 +79,8 @@ jobs:
             mkdir -p $dest
 
             ## move to correct directory (root)
-            git mv $value $dest/
+            git mv $value $dest/app.R
             git mv ${{ env.STATIC_INCLUDE}} $dest/
           done
-
+          git status
           ls -R
