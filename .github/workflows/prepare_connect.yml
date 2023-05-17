@@ -37,6 +37,7 @@ jobs:
         shell: bash
         run: |
           echo "Paths"
+          newarray=${{ env.path_array }}
           for value in ${newarray[@]}
           do
             echo " --> $value"
