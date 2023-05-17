@@ -70,19 +70,20 @@ jobs:
           # Print the words after the split
           for value in ${newarray[@]}
           do
-            # Remove directories if they exist
-            [ ! -d "$value" ] || git rm -rf $value
-
             # check out recent versions
             git checkout $SHA -- $value
             git checkout $SHA -- ${{ env.STATIC_INCLUDE}}
 
             dest=$(basename "$value")
+
+            # Remove directories if they exist
+            [ ! -d $dest ] || git rm -rf $dest
+
             mkdir -p $dest
 
             ## move to correct directory (root)
-            git mv $value $dest/app.R
-            git mv ${{ env.STATIC_INCLUDE}} $dest/
+            git mv -f $value $dest/app.R
+            git mv -f ${{ env.STATIC_INCLUDE}} $dest/
 
             git add $dest
           done
