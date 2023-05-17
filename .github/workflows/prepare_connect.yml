@@ -38,6 +38,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Declare short SHA
+        shell: bash
+        run: >
+          echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
       - name: Setup git config
         run: |
           git config user.name "${{ github.actor }}"
@@ -56,11 +61,6 @@ jobs:
           else
             git switch --orphan $BRANCH_DEPLOY
           fi
-
-      - name: Declare short SHA
-        shell: bash
-        run: >
-          echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
       - name: Checkout Apps
         shell: bash
