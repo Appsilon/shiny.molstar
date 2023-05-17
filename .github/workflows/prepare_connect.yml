@@ -7,7 +7,7 @@ env:
   RENV_PATHS_ROOT: ~/.local/share/renv
   BRANCH_DEPLOY: bot/deploy
   PUSH_ON_BRANCH: deploy-examples
-  PACKAGE_NAME: appsilon/shiny.molstar
+  PACKAGE_NAME: Appsilon/shiny.molstar
 
 jobs:
   prepare-deployments:
@@ -118,7 +118,8 @@ jobs:
       - name: Install package
         shell: Rscript {0}
         run: |
-          renv::install(paste0(Sys.getenv("PACKAGE_NAME"), "@", Sys.getenv("SHA")))
+          renv::install(Sys.getenv("PACKAGE_NAME"))
+          # renv::install(paste0(Sys.getenv("PACKAGE_NAME"), "@", Sys.getenv("SHA")))
 
       - name: Write Manifests
         shell: Rscript {0}
