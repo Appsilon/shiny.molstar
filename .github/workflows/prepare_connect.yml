@@ -35,9 +35,13 @@ jobs:
 
       - name: Break paths to deploy
         shell: bash
-        run: >
+        run: |
           echo "Paths"
-          echo "${{ env.path_array }}"
+          for value in ${newarray[@]}
+          do
+            git add $value
+          done
+
 
       - name: Setup system dependencies
         shell: bash
