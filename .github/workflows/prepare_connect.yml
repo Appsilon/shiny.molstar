@@ -22,8 +22,7 @@ jobs:
           delimiter=";;"
 
           # Define the string to split
-          text="inst/examples/app/analytics$delimiter"
-          text=${{ inputs.path-to-shiny-apps }}$delimiter
+          text=${{ env.DEPLOY_PATHS }}$delimiter
 
           # Split the text based on the delimiter
           newarray=()
