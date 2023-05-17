@@ -17,12 +17,12 @@ jobs:
     steps:
       - name: Break paths to deploy
         shell: bash
-        run: >
+        run: |
           # store multi-character delimiter
           delimiter=";;"
 
           # Define the string to split
-          text=${{ env.DEPLOY_PATHS }}$delimiter
+          text="inst/examples/AlphaFold.R;;inst/examples/FullPage.R$delimiter"
 
           # Split the text based on the delimiter
           newarray=()
