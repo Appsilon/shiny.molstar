@@ -30,8 +30,8 @@ jobs:
            newarray+=( "${text%%"$delimiter"*}" )
            text=${text#*"$delimiter"}
           done
-
-          echo "path_array=($newarray)" >> $GITHUB_ENV
+          echo $newarray
+          echo "path_array=(${newarray[@]})" >> $GITHUB_ENV
 
       - name: Break paths to deploy
         shell: bash
