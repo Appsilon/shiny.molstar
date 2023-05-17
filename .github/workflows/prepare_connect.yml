@@ -6,6 +6,7 @@ name: Prepare Connect Deployment
 env:
   BRANCH_DEPLOY: bot/deploy
   PUSH_ON_BRANCH: deploy-examples
+  PACKAGE_NAME: appsilon/molstar
 
 jobs:
   prepare-deployments:
@@ -81,6 +82,41 @@ jobs:
             ## move to correct directory (root)
             git mv $value $dest/app.R
             git mv ${{ env.STATIC_INCLUDE}} $dest/
+
+            git add $dest
           done
-          git status
-          ls -R
+
+      - name: Install R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install renv and box
+        run: install.packages("renv")
+        shell: Rscript {0}
+
+      - name: Renv init
+        shell: Rscript {0}
+        run: |
+          renv::init()
+          renv::install("rsconnect")
+
+      - name: Cache packages
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: Install package
+        shell: Rscript {0}
+        run: |
+          renv::install(paste0(Sys.getenv("PACKAGE_NAME"), "@", Sys.getenv("SHA")))
+
+      - name: Write Manifests
+        shell: Rscript {0}
+        run: |
+          print("path_array")
+          print(Sys.getenv("path_array"))
+          print("----------------------")
