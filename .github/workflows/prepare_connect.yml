@@ -117,9 +117,10 @@ jobs:
 
       - name: Install package
         shell: Rscript {0}
+        env:
+          GITHUB_PAT: ${{ github.token }}
         run: |
-          renv::install(Sys.getenv("PACKAGE_NAME"))
-          # renv::install(paste0(Sys.getenv("PACKAGE_NAME"), "@", Sys.getenv("SHA")))
+          renv::install(paste0(Sys.getenv("PACKAGE_NAME"), "@", Sys.getenv("SHA")))
 
       - name: Write Manifests
         shell: Rscript {0}
