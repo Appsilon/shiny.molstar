@@ -14,6 +14,7 @@ jobs:
     env:
       SHA: ${{ github.sha }}
       DEPLOY_PATHS: "inst/examples/AlphaFold.R;;inst/examples/FullPage.R"
+      STATIC_INCLUDE: "inst/examples/www"
     steps:
       - name: Break paths to deploy
         shell: bash
@@ -30,32 +31,56 @@ jobs:
            newarray+=( "${text%%"$delimiter"*}" )
            text=${text#*"$delimiter"}
           done
-          echo $newarray
           echo "path_array=(${newarray[@]})" >> $GITHUB_ENV
-
-      - name: Break paths to deploy
-        shell: bash
-        run: |
-          echo "Paths"
-          newarray=${{ env.path_array }}
-          for value in ${newarray[@]}
-          do
-            echo " --> $value"
-          done
-
-
-      - name: Setup system dependencies
-        shell: bash
-        run: >
-          sudo apt-get update && sudo apt-get install --yes
-          libcurl4-openssl-dev
 
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Setup git config
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+
+      - name: Fetch branch if exists
+        continue-on-error: true
+        run: |
+          git fetch origin $BRANCH_DEPLOY
+
+      - name: Checkout branch and cleanup (setup orphan if no branch exists)
+        run: |
+          if [ `git rev-parse --verify origin/$BRANCH_DEPLOY 2>/dev/null` ]
+          then
+             git checkout origin/$BRANCH_DEPLOY -b $BRANCH_DEPLOY
+          else
+            git switch --orphan $BRANCH_DEPLOY
+          fi
+
       - name: Declare short SHA
         shell: bash
-        run: |
-          echo "SHA=${{ github.sha }}" >> $GITHUB_ENV
+        run: >
           echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
+      - name: Checkout Apps
+        shell: bash
+        run: |
+          newarray=${{ env.path_array}}
+
+          # Print the words after the split
+          for value in ${newarray[@]}
+          do
+            # Remove directories if they exist
+            [ ! -d "$value" ] || git rm -rf $value
+
+            # check out recent versions
+            git checkout $SHA -- $value
+            git checkout $SHA -- ${{ env.STATIC_INCLUDE}}
+
+            dest=$(basename "$value")
+            mkdir -p $dest
+
+            ## move to correct directory (root)
+            git mv $value $dest/
+            git mv ${{ env.STATIC_INCLUDE}} $dest/
+          done
+
+          ls -R
