@@ -137,4 +137,28 @@ jobs:
 
           done
 
-          ls -R
+      - name: Add to git tree
+        shell: bash
+        run: |
+          newarray=${{ env.path_array}}
+
+          # Print the words after the split
+          for value in ${newarray[@]}
+          do
+
+            dest=$(basename "$value")
+            git add $dest
+
+          done
+
+          git commit -m "Update deployed apps @${{ env.sha_short }}"
+
+          git status
+          git describe --all
+          git log
+
+      - name: Push to branch
+        if: ${{ github.ref_name == env.PUSH_ON_BRANCH }}
+        id: push-changes
+        run: |
+          git push origin $BRANCH_DEPLOY
