@@ -1,0 +1,57 @@
+on:
+  push:
+
+name: Prepare Connect Deployment
+
+env:
+  BRANCH_DEPLOY: bot/deploy
+  PUSH_ON_BRANCH: deploy-examples
+
+jobs:
+  prepare-deployments:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SHA: ${{ github.sha }}
+      DEPLOY_PATHS: "inst/examples/AlphaFold.R;;inst/examples/FullPage.R"
+    steps:
+      - name: Break paths to deploy
+        shell: bash
+        run: >
+          # store multi-character delimiter
+          delimiter=";;"
+
+          # Define the string to split
+          text="inst/examples/app/analytics$delimiter"
+          text=${{ inputs.path-to-shiny-apps }}$delimiter
+
+          # Split the text based on the delimiter
+          newarray=()
+          while [[ $text ]]; do
+           newarray+=( "${text%%"$delimiter"*}" )
+           text=${text#*"$delimiter"}
+          done
+
+          echo "path_array=$newarray" >> $GITHUB_ENV
+
+      - name: Break paths to deploy
+        shell: bash
+        run: >
+          echo "Paths"
+          echo "${{ env.path_array }}"
+
+      - name: Setup system dependencies
+        shell: bash
+        run: >
+          sudo apt-get update && sudo apt-get install --yes
+          libcurl4-openssl-dev
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Declare short SHA
+        shell: bash
+        run: |
+          echo "SHA=${{ github.sha }}" >> $GITHUB_ENV
+          echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
