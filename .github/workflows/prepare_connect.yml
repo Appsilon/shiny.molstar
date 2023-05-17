@@ -39,7 +39,7 @@ jobs:
           echo "Paths"
           for value in ${newarray[@]}
           do
-            git add $value
+            echo " --> $value"
           done
 
 
