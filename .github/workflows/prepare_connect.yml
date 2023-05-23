@@ -25,7 +25,7 @@ jobs:
           delimiter=";;"
 
           # Define the string to split
-          text="inst/examples/AlphaFold.R;;inst/examples/FullPage.R$delimiter"
+          text="$DEPLOY_PATHS$delimiter"
 
           # Split the text based on the delimiter
           newarray=()
