@@ -107,8 +107,6 @@ jobs:
         run: |
           renv::init()
           renv::install("rsconnect")
-          # needed due to problem with connect
-          renv::install("rlang")
           renv::snapshot()
 
       - name: Cache packages
