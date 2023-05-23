@@ -6,7 +6,7 @@ name: Prepare Connect Deployment
 env:
   RENV_PATHS_ROOT: ~/.local/share/renv
   BRANCH_DEPLOY: bot/deploy
-  PUSH_ON_BRANCH: main
+  PUSH_ON_BRANCH: deploy-examples
   PACKAGE_NAME: Appsilon/shiny.molstar
 
 jobs:
@@ -107,6 +107,8 @@ jobs:
         run: |
           renv::init()
           renv::install("rsconnect")
+          # needed due to problem with connect
+          renv::install("rlang")
           renv::snapshot()
 
       - name: Cache packages
@@ -123,6 +125,7 @@ jobs:
           GITHUB_PAT: ${{ github.token }}
         run: |
           renv::install(paste0(Sys.getenv("PACKAGE_NAME"), "@", Sys.getenv("SHA")))
+          renv::snapshot()
 
       - name: Write Manifests
         shell: bash
