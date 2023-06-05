@@ -3789,7 +3789,7 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
-molstar-react@^0.5.1:
+molstar-react@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/molstar-react/-/molstar-react-0.5.2.tgz#98c17cb73ddd034c49bd31e6f3695b1eb0144986"
   integrity sha512-9sGlElCEZ30yrx8oky1aOUyTtHn0IgI3x85sXzD1kSCA7vx1v950t3r/+rqxGrHJ+19hhogS2RHmH6VDQVYg4A==

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "jest": "^29.4.2",
-    "molstar-react": "^0.5.1"
+    "molstar-react": "^0.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
