@@ -1,0 +1,60 @@
+name: Prepare Connect Deployment
+on: push
+permissions:
+  contents: write
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # The workflow runs on push to any branch (to make sure it works),
+      # but the TARGET_BRANCH will only be updated when pushing to SOURCE_BRANCH.
+      SOURCE_BRANCH: main
+      TARGET_BRANCH: bot/deploy
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Install R package dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          # Install the package from a source which Posit Connect can access
+          # (using `local:.` wouldn't work).
+          packages: ${{ github.repository }}@${{ github.sha }}
+          extra-packages: rsconnect
+        env:
+          GITHUB_PAT: ${{ github.token }} # Needed, as the repo is private.
+
+      - name: Copy examples to build directory
+        run: |
+          set -eu # Strict Mode
+
+          build=$PWD/build
+          mkdir "$build"
+
+          cd inst/examples
+          for example in *.R; do
+            dest=$build/$(basename "$example" .R)
+            mkdir "$dest"
+            cp "$example" "$dest/app.R"
+            cp -r www "$dest"
+          done
+
+      - name: Write manifest files
+        shell: Rscript {0}
+        run: |
+          for (example in dir("build", full.names = TRUE)) {
+            rsconnect::writeManifest(example)
+          }
+
+      - name: Deploy to branch
+        # This action was designed for GitHub Pages deployments, but it works perfectly here.
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          dry-run: ${{ github.ref_name != env.SOURCE_BRANCH }}
+          branch: ${{ env.TARGET_BRANCH }}
+          folder: build
+          clean: true
