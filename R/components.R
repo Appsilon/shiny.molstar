@@ -90,11 +90,11 @@ Molstar <- function(
     checkmate::check_string(url),
     combine = "or"
   )
-  checkmate::expect_string(class, null.ok = TRUE)
-  checkmate::expect_numeric(dimensions, len = 2, null.ok = TRUE)
-  checkmate::expect_flag(useInterface, null.ok = TRUE)
-  checkmate::expect_flag(showControls, null.ok = TRUE)
-  checkmate::expect_flag(showAxes, null.ok = TRUE)
+  checkmate::assert_string(class, null.ok = TRUE)
+  checkmate::assert_numeric(dimensions, len = 2, null.ok = TRUE)
+  checkmate::assert_flag(useInterface, null.ok = TRUE)
+  checkmate::assert_flag(showControls, null.ok = TRUE)
+  checkmate::assert_flag(showAxes, null.ok = TRUE)
 
   reactComponent <- component("Molstar")
   reactComponent(
@@ -132,13 +132,13 @@ AlphaFoldMolstar <- function(
   useCif = FALSE,
   ...
 ) {
-  checkmate::expect_string(uniProtId)
-  checkmate::expect_string(class, null.ok = TRUE)
-  checkmate::expect_numeric(dimensions, len = 2, null.ok = TRUE)
-  checkmate::expect_flag(useInterface, null.ok = TRUE)
-  checkmate::expect_flag(showAxes, null.ok = TRUE)
-  checkmate::expect_flag(showControls, null.ok = TRUE)
-  checkmate::expect_flag(useCif, null.ok = TRUE)
+  checkmate::assert_string(uniProtId)
+  checkmate::assert_string(class, null.ok = TRUE)
+  checkmate::assert_numeric(dimensions, len = 2, null.ok = TRUE)
+  checkmate::assert_flag(useInterface, null.ok = TRUE)
+  checkmate::assert_flag(showAxes, null.ok = TRUE)
+  checkmate::assert_flag(showControls, null.ok = TRUE)
+  checkmate::assert_flag(useCif, null.ok = TRUE)
 
   reactComponent <- customComponent("AlphaFoldMolstar")
   reactComponent(
@@ -175,10 +175,10 @@ AlphaFoldDetails <- function(
   showPae = FALSE,
   ...
 ) {
-  checkmate::expect_string(uniProtId)
-  checkmate::expect_string(class, null.ok = TRUE)
-  checkmate::expect_flag(showFiles, null.ok = TRUE)
-  checkmate::expect_flag(showPae, null.ok = TRUE)
+  checkmate::assert_string(uniProtId)
+  checkmate::assert_string(class, null.ok = TRUE)
+  checkmate::assert_flag(showFiles, null.ok = TRUE)
+  checkmate::assert_flag(showPae, null.ok = TRUE)
 
   reactComponent <- customComponent("AlphaFoldDetails")
   reactComponent(
