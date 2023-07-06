@@ -54,8 +54,8 @@
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
-        "Version": "1.0.10",
-        "Date": "2023-01-12",
+        "Version": "1.0.11",
+        "Date": "2023-07-03",
         "Author": "Dirk Eddelbuettel, Romain Francois, JJ Allaire, Kevin Ushey, Qiang Kou,\n Nathan Russell, Inaki Ucar, Douglas Bates and John Chambers",
         "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
         "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
@@ -66,17 +66,18 @@
         "BugReports": "https://github.com/RcppCore/Rcpp/issues",
         "MailingList": "rcpp-devel@lists.r-forge.r-project.org",
         "RoxygenNote": "6.1.1",
+        "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2023-01-12 14:11:18 UTC; edd",
+        "Packaged": "2023-07-03 15:56:55 UTC; edd",
         "Repository": "CRAN",
-        "Date/Publication": "2023-01-22 16:30:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-07-04 13:32:31 UTC; unix",
+        "Date/Publication": "2023-07-06 07:33:14 UTC",
+        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-07-06 08:27:20 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "Rcpp",
         "RemoteRef": "Rcpp",
         "RemoteRepos": "https://cloud.r-project.org",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "1.0.10"
+        "RemoteSha": "1.0.11"
       }
     },
     "backports": {
@@ -1221,8 +1222,8 @@
       "Repository": null,
       "GithubRepo": "shiny.molstar",
       "GithubUsername": "Appsilon",
-      "GithubRef": "74ccf1444a684d1e66eaa28072093c8d0d86307a",
-      "GithubSha1": "74ccf1444a684d1e66eaa28072093c8d0d86307a",
+      "GithubRef": "a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45",
+      "GithubSha1": "a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45",
       "description": {
         "Package": "shiny.molstar",
         "Type": "Package",
@@ -1239,21 +1240,21 @@
         "Roxygen": "list(markdown = TRUE)",
         "Config/rcmdcheck/ignore-inconsequential-notes": "true",
         "NeedsCompilation": "no",
-        "Packaged": "2023-07-04 22:20:55 UTC; runner",
+        "Packaged": "2023-07-06 08:27:56 UTC; runner",
         "Author": "André Veríssimo [aut],\n  Appsilon Sp. z o.o. [cph, cre]",
         "Maintainer": "Appsilon Sp. z o.o. <hello@appsilon.com>",
-        "Built": "R 4.3.1; ; 2023-07-04 22:20:56 UTC; unix",
+        "Built": "R 4.3.1; ; 2023-07-06 08:27:57 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shiny.molstar",
         "RemoteUsername": "Appsilon",
-        "RemotePkgRef": "Appsilon/shiny.molstar@74ccf1444a684d1e66eaa28072093c8d0d86307a",
-        "RemoteRef": "74ccf1444a684d1e66eaa28072093c8d0d86307a",
-        "RemoteSha": "74ccf1444a684d1e66eaa28072093c8d0d86307a",
+        "RemotePkgRef": "Appsilon/shiny.molstar@a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45",
+        "RemoteRef": "a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45",
+        "RemoteSha": "a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45",
         "GithubRepo": "shiny.molstar",
         "GithubUsername": "Appsilon",
-        "GithubRef": "74ccf1444a684d1e66eaa28072093c8d0d86307a",
-        "GithubSHA1": "74ccf1444a684d1e66eaa28072093c8d0d86307a"
+        "GithubRef": "a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45",
+        "GithubSHA1": "a26b132d8c7ec607d76b8a31d01a1cbe19fcfe45"
       }
     },
     "shiny.react": {
