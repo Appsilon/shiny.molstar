@@ -435,7 +435,7 @@
       "description": {
         "Type": "Package",
         "Package": "fontawesome",
-        "Version": "0.5.1",
+        "Version": "0.5.2",
         "Title": "Easily Work with 'Font Awesome' Icons",
         "Description": "Easily and flexibly insert 'Font Awesome' icons into 'R Markdown'\ndocuments and 'Shiny' apps. These icons can be inserted into HTML content\nthrough inline 'SVG' tags or 'i' tags. There is also a utility function for\nexporting 'Font Awesome' icons as 'PNG' images for those situations where\nraster graphics are needed.",
         "Authors@R": "c(\nperson(\"Richard\", \"Iannone\", , \"rich@posit.co\", c(\"aut\", \"cre\"),\ncomment = c(ORCID = \"0000-0003-3925-190X\")),\nperson(\"Christophe\", \"Dervieux\", , \"cderv@posit.co\", role = \"ctb\",\ncomment = c(ORCID = \"0000-0003-4474-2498\")),\nperson(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"ctb\"),\nperson(\"Dave\", \"Gandy\", role = c(\"ctb\", \"cph\"),\ncomment = \"Font-Awesome font\"),\nperson(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n)",
@@ -450,18 +450,18 @@
         "Suggests": "covr, dplyr (>= 1.0.8), knitr (>= 1.31), testthat (>= 3.0.0),\nrsvg",
         "Config/testthat/edition": "3",
         "NeedsCompilation": "no",
-        "Packaged": "2023-04-18 17:20:05 UTC; rich",
+        "Packaged": "2023-08-19 02:32:12 UTC; rich",
         "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>),\nChristophe Dervieux [ctb] (<https://orcid.org/0000-0003-4474-2498>),\nWinston Chang [ctb],\nDave Gandy [ctb, cph] (Font-Awesome font),\nPosit Software, PBC [cph, fnd]",
         "Maintainer": "Richard Iannone <rich@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-04-18 20:30:02 UTC",
-        "Built": "R 4.3.1; ; 2023-08-16 11:54:18 UTC; unix",
+        "Date/Publication": "2023-08-19 04:52:40 UTC",
+        "Built": "R 4.3.1; ; 2023-08-21 07:34:16 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "fontawesome",
         "RemoteRef": "fontawesome",
         "RemoteRepos": "https://cloud.r-project.org",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "0.5.1"
+        "RemoteSha": "0.5.2"
       }
     },
     "fs": {
@@ -1109,21 +1109,21 @@
         "Roxygen": "list(markdown = TRUE)",
         "Config/rcmdcheck/ignore-inconsequential-notes": "true",
         "NeedsCompilation": "no",
-        "Packaged": "2023-08-16 12:01:42 UTC; runner",
+        "Packaged": "2023-08-21 07:34:22 UTC; runner",
         "Author": "André Veríssimo [aut],\nAppsilon Sp. z o.o. [cph, cre]",
         "Maintainer": "Appsilon Sp. z o.o. <hello@appsilon.com>",
-        "Built": "R 4.3.1; ; 2023-08-16 12:01:43 UTC; unix",
+        "Built": "R 4.3.1; ; 2023-08-21 07:34:23 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shiny.molstar",
         "RemoteUsername": "Appsilon",
-        "RemotePkgRef": "Appsilon/shiny.molstar@01adf0f1eab52fe9d97147643715dded553cf266",
-        "RemoteRef": "01adf0f1eab52fe9d97147643715dded553cf266",
-        "RemoteSha": "01adf0f1eab52fe9d97147643715dded553cf266",
+        "RemotePkgRef": "Appsilon/shiny.molstar@16a1c7cd5a93a23e41fef59133ecdbdba506f695",
+        "RemoteRef": "16a1c7cd5a93a23e41fef59133ecdbdba506f695",
+        "RemoteSha": "16a1c7cd5a93a23e41fef59133ecdbdba506f695",
         "GithubRepo": "shiny.molstar",
         "GithubUsername": "Appsilon",
-        "GithubRef": "01adf0f1eab52fe9d97147643715dded553cf266",
-        "GithubSHA1": "01adf0f1eab52fe9d97147643715dded553cf266"
+        "GithubRef": "16a1c7cd5a93a23e41fef59133ecdbdba506f695",
+        "GithubSHA1": "16a1c7cd5a93a23e41fef59133ecdbdba506f695"
       }
     },
     "shiny.react": {
