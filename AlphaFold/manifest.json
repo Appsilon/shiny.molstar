@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "C",
-  "platform": "4.3.1",
+  "platform": "4.3.2",
   "metadata": {
     "appmode": "shiny",
     "primary_rmd": null,
@@ -12,7 +12,7 @@
   "packages": {
     "R6": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "R6",
         "Title": "Encapsulated Classes with Reference Semantics",
@@ -31,18 +31,18 @@
         "Maintainer": "Winston Chang <winston@stdout.org>",
         "Repository": "CRAN",
         "Date/Publication": "2021-08-19 14:00:05 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:10:26 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:12:54 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "R6",
         "RemoteRef": "R6",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "2.5.1"
       }
     },
     "Rcpp": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
@@ -63,18 +63,18 @@
         "Packaged": "2023-07-03 15:56:55 UTC; edd",
         "Repository": "CRAN",
         "Date/Publication": "2023-07-06 07:33:14 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:10:31 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:57 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "Rcpp",
         "RemoteRef": "Rcpp",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.0.11"
       }
     },
     "backports": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "backports",
         "Type": "Package",
@@ -95,18 +95,18 @@
         "Author": "Michel Lang [cre, aut] (<https://orcid.org/0000-0001-9754-0393>),\n  R Core Team [aut]",
         "Repository": "CRAN",
         "Date/Publication": "2021-12-13 11:30:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:13:48 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:15:11 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "backports",
         "RemoteRef": "backports",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.4.1"
       }
     },
     "base64enc": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "base64enc",
         "Version": "0.1-3",
@@ -122,55 +122,57 @@
         "Packaged": "2015-02-04 20:31:00 UTC; svnuser",
         "Repository": "CRAN",
         "Date/Publication": "2015-07-28 08:03:37",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:08:27 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:11:35 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "base64enc",
         "RemoteRef": "base64enc",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.1-3"
       }
     },
     "bslib": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "bslib",
         "Title": "Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'",
-        "Version": "0.5.1",
-        "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"), email = \"carson@posit.co\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@posit.co\"),\n    person(\"Garrick\", \"Aden-Buie\", role = \"aut\", email = \"garrick@posit.co\", comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(family = \"Bootstrap contributors\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Twitter, Inc\", role = \"cph\",\n    comment = \"Bootstrap library\"),\n    person(\"Javi\", \"Aguilar\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootstrap colorpicker library\"),\n    person(\"Thomas\", \"Park\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootswatch library\"),\n    person(family = \"PayPal\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootstrap accessibility plugin\")\n    )",
+        "Version": "0.6.0",
+        "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(, \"Bootstrap contributors\", role = \"ctb\",\n           comment = \"Bootstrap library\"),\n    person(, \"Twitter, Inc\", role = \"cph\",\n           comment = \"Bootstrap library\"),\n    person(\"Javi\", \"Aguilar\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootstrap colorpicker library\"),\n    person(\"Thomas\", \"Park\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootswatch library\"),\n    person(, \"PayPal\", role = c(\"ctb\", \"cph\"),\n           comment = \"Bootstrap accessibility plugin\")\n  )",
         "Description": "Simplifies custom 'CSS' styling of both 'shiny' and\n    'rmarkdown' via 'Bootstrap' 'Sass'. Supports 'Bootstrap' 3, 4 and 5 as\n    well as their various 'Bootswatch' themes. An interactive widget is\n    also provided for previewing themes in real time.",
         "License": "MIT + file LICENSE",
         "URL": "https://rstudio.github.io/bslib/, https://github.com/rstudio/bslib",
         "BugReports": "https://github.com/rstudio/bslib/issues",
         "Depends": "R (>= 2.10)",
-        "Imports": "base64enc, cachem, grDevices, htmltools (>= 0.5.4), jquerylib\n(>= 0.1.3), jsonlite, memoise (>= 2.0.1), mime, rlang, sass (>=\n0.4.0)",
-        "Suggests": "bsicons, curl, fontawesome, ggplot2, knitr, magrittr,\nrappdirs, rmarkdown (>= 2.7), shiny (>= 1.6.0), testthat,\nthematic, withr",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.3",
-        "Collate": "'accordion.R' 'breakpoints.R' 'bs-current-theme.R'\n'bs-dependencies.R' 'bs-global.R' 'bs-remove.R'\n'bs-theme-layers.R' 'bs-theme-preset-bootswatch.R'\n'bs-theme-preset-builtin.R' 'bs-theme-preset.R' 'utils.R'\n'bs-theme-preview.R' 'bs-theme-update.R' 'bs-theme.R'\n'bslib-package.R' 'card.R' 'deprecated.R' 'files.R' 'fill.R'\n'imports.R' 'input-switch.R' 'layout.R' 'nav-items.R'\n'nav-update.R' 'navs-legacy.R' 'navs.R' 'onLoad.R' 'page.R'\n'popover.R' 'precompiled.R' 'print.R' 'shiny-devmode.R'\n'sidebar.R' 'staticimports.R' 'tooltip.R' 'utils-deps.R'\n'utils-shiny.R' 'utils-tags.R' 'value-box.R'\n'version-default.R' 'versions.R'",
-        "Config/testthat/edition": "3",
+        "Imports": "base64enc, cachem, grDevices, htmltools (>= 0.5.7), jquerylib\n(>= 0.1.3), jsonlite, lifecycle, memoise (>= 2.0.1), mime,\nrlang, sass (>= 0.4.0)",
+        "Suggests": "bsicons, curl, fontawesome, ggplot2, knitr, magrittr,\nrappdirs, rmarkdown (>= 2.7), shiny (>= 1.8.0), testthat,\nthematic, withr",
+        "Config/Needs/deploy": "BH, chiflights22, colourpicker, commonmark, cpp11,\ncpsievert/chiflights22, cpsievert/histoslider, dplyr, DT,\nggplot2, ggridges, gt, hexbin, histoslider, htmlwidgets,\nlattice, leaflet, lubridate, modelr, plotly, reactable,\nreshape2, rprojroot, rsconnect, rstudio/shiny, scales, styler,\ntibble",
         "Config/Needs/routine": "chromote, desc, renv",
         "Config/Needs/website": "brio, crosstalk, dplyr, DT, ggplot2, glue,\nhtmlwidgets, leaflet, lorem, palmerpenguins, plotly, purrr,\nrprojroot, rstudio/htmltools, scales, stringr, tidyr, webshot2",
-        "Config/Needs/deploy": "BH, cpp11, dplyr, DT, ggplot2, ggridges, gt,\nhexbin, histoslider, lattice, leaflet, lubridate, modelr,\nnycflights13, plotly, reactable, reshape2, rprojroot,\nrsconnect, scales",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/testthat/start-first": "zzzz-bs-sass, fonts, zzz-precompile,\ntheme-*, rmd-*",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "Collate": "'accordion.R' 'breakpoints.R' 'bs-current-theme.R'\n'bs-dependencies.R' 'bs-global.R' 'bs-remove.R'\n'bs-theme-layers.R' 'bs-theme-preset-bootswatch.R'\n'bs-theme-preset-builtin.R' 'bs-theme-preset.R' 'utils.R'\n'bs-theme-preview.R' 'bs-theme-update.R' 'bs-theme.R'\n'bslib-package.R' 'card.R' 'deprecated.R' 'files.R' 'fill.R'\n'imports.R' 'input-dark-mode.R' 'input-switch.R' 'layout.R'\n'nav-items.R' 'nav-update.R' 'navs-legacy.R' 'navs.R'\n'onLoad.R' 'page.R' 'popover.R' 'precompiled.R' 'print.R'\n'shiny-devmode.R' 'sidebar.R' 'staticimports.R' 'tooltip.R'\n'utils-deps.R' 'utils-shiny.R' 'utils-tags.R' 'value-box.R'\n'version-default.R' 'versions.R'",
         "NeedsCompilation": "no",
-        "Packaged": "2023-08-11 15:31:21 UTC; cpsievert",
+        "Packaged": "2023-11-21 20:29:03 UTC; cpsievert",
         "Author": "Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Joe Cheng [aut],\n  Garrick Aden-Buie [aut] (<https://orcid.org/0000-0002-7111-0077>),\n  Posit Software, PBC [cph, fnd],\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Javi Aguilar [ctb, cph] (Bootstrap colorpicker library),\n  Thomas Park [ctb, cph] (Bootswatch library),\n  PayPal [ctb, cph] (Bootstrap accessibility plugin)",
         "Maintainer": "Carson Sievert <carson@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-08-11 16:53:52 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:21:50 UTC; unix",
+        "Date/Publication": "2023-11-21 22:50:02 UTC",
+        "Built": "R 4.3.2; ; 2023-11-24 13:21:07 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "bslib",
         "RemoteRef": "bslib",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "0.5.1"
+        "RemoteSha": "0.6.0"
       }
     },
     "cachem": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "cachem",
         "Version": "1.0.8",
@@ -192,18 +194,18 @@
         "Maintainer": "Winston Chang <winston@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-05-01 16:40:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:15:54 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:17:04 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "cachem",
         "RemoteRef": "cachem",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.0.8"
       }
     },
     "checkmate": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "checkmate",
         "Type": "Package",
@@ -229,18 +231,18 @@
         "Maintainer": "Michel Lang <michellang@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-10-25 13:20:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:24:46 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:23:33 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "checkmate",
         "RemoteRef": "checkmate",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "2.3.0"
       }
     },
     "cli": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "cli",
         "Title": "Helpers for Developing Command Line Interfaces",
@@ -263,18 +265,18 @@
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-03-23 12:52:05 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:08:34 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:11:41 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "cli",
         "RemoteRef": "cli",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "3.6.1"
       }
     },
     "commonmark": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "commonmark",
         "Type": "Package",
@@ -295,18 +297,18 @@
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "Repository": "CRAN",
         "Date/Publication": "2023-03-17 18:40:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:08:46 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:11:48 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "commonmark",
         "RemoteRef": "commonmark",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.9.0"
       }
     },
     "crayon": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "crayon",
         "Title": "Colored Terminal Output",
@@ -327,18 +329,18 @@
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2022-09-29 16:20:24 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:09:00 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:11:56 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "crayon",
         "RemoteRef": "crayon",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.5.2"
       }
     },
     "digest": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "digest",
         "Author": "Dirk Eddelbuettel <edd@debian.org> with contributions\n by Antoine Lucas, Jarek Tuszynski, Henrik Bengtsson, Simon Urbanek,\n Mario Frasca, Bryan Lewis, Murray Stokely, Hannes Muehleisen,\n Duncan Murdoch, Jim Hester, Wush Wu, Qiang Kou, Thierry Onkelinx,\n Michel Lang, Viliam Simko, Kurt Hornik, Radford Neal, Kendon Bell,\n Matthew de Queljoe, Ion Suruceanu, Bill Denney, Dirk Schumacher,\n Winston Chang, and Dean Attali.",
@@ -358,18 +360,18 @@
         "Packaged": "2023-06-28 02:46:18 UTC; edd",
         "Repository": "CRAN",
         "Date/Publication": "2023-07-07 14:10:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:09:07 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:01 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "digest",
         "RemoteRef": "digest",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.6.33"
       }
     },
     "ellipsis": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "ellipsis",
         "Version": "0.3.2",
@@ -390,18 +392,18 @@
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2021-04-29 12:40:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:15:56 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:17:05 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "ellipsis",
         "RemoteRef": "ellipsis",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.3.2"
       }
     },
     "fastmap": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "fastmap",
         "Title": "Fast Data Structures",
@@ -420,18 +422,18 @@
         "Maintainer": "Winston Chang <winston@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-02-24 16:30:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:09:22 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:12 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "fastmap",
         "RemoteRef": "fastmap",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.1.1"
       }
     },
     "fontawesome": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "fontawesome",
@@ -455,18 +457,18 @@
         "Maintainer": "Richard Iannone <rich@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-08-19 04:52:40 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:16:30 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:17:30 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "fontawesome",
         "RemoteRef": "fontawesome",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.5.2"
       }
     },
     "fs": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "fs",
         "Title": "Cross-Platform File System Operations Based on 'libuv'",
@@ -494,18 +496,18 @@
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-07-20 10:30:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:09:27 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:15 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "fs",
         "RemoteRef": "fs",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.6.3"
       }
     },
     "glue": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "glue",
         "Title": "Interpreted String Literals",
@@ -530,55 +532,55 @@
         "Maintainer": "Jennifer Bryan <jenny@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2022-02-24 07:50:20 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:09:57 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:35 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "glue",
         "RemoteRef": "glue",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.6.2"
       }
     },
     "htmltools": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
-        "Package": "htmltools",
         "Type": "Package",
+        "Package": "htmltools",
         "Title": "Tools for HTML",
-        "Version": "0.5.6.1",
-        "Authors@R": "c(\n  person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@posit.co\"),\n  person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"), email = \"carson@posit.co\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n  person(\"Barret\", \"Schloerke\", role = \"aut\", email = \"barret@posit.co\", comment = c(ORCID = \"0000-0001-9986-114X\")),\n  person(\"Winston\", \"Chang\", role = \"aut\", email = \"winston@posit.co\", comment = c(ORCID = \"0000-0002-1576-2126\")),\n  person(\"Yihui\", \"Xie\", role = \"aut\", email = \"yihui@posit.co\"),\n  person(\"Jeff\", \"Allen\", role = \"aut\"),\n  person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n )",
+        "Version": "0.5.7",
+        "Authors@R": "c(\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-1576-2126\")),\n    person(\"Yihui\", \"Xie\", , \"yihui@posit.co\", role = \"aut\"),\n    person(\"Jeff\", \"Allen\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
         "Description": "Tools for HTML generation and output.",
-        "Depends": "R (>= 2.14.1)",
-        "Imports": "utils, digest, grDevices, base64enc, rlang (>= 0.4.12),\nfastmap (>= 1.1.0), ellipsis",
-        "Suggests": "markdown, testthat, withr, Cairo, ragg, shiny",
-        "Enhances": "knitr",
         "License": "GPL (>= 2)",
         "URL": "https://github.com/rstudio/htmltools,\nhttps://rstudio.github.io/htmltools/",
         "BugReports": "https://github.com/rstudio/htmltools/issues",
-        "RoxygenNote": "7.2.3",
-        "Encoding": "UTF-8",
-        "Collate": "'colors.R' 'fill.R' 'html_dependency.R' 'html_escape.R'\n'html_print.R' 'htmltools-package.R' 'images.R' 'known_tags.R'\n'selector.R' 'staticimports.R' 'tag_query.R' 'utils.R' 'tags.R'\n'template.R'",
+        "Depends": "R (>= 2.14.1)",
+        "Imports": "base64enc, digest, ellipsis, fastmap (>= 1.1.0), grDevices,\nrlang (>= 1.0.0), utils",
+        "Suggests": "Cairo, markdown, ragg, shiny, testthat, withr",
+        "Enhances": "knitr",
         "Config/Needs/check": "knitr",
         "Config/Needs/website": "rstudio/quillt, bench",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "Collate": "'colors.R' 'fill.R' 'html_dependency.R' 'html_escape.R'\n'html_print.R' 'htmltools-package.R' 'images.R' 'known_tags.R'\n'selector.R' 'staticimports.R' 'tag_query.R' 'utils.R' 'tags.R'\n'template.R'",
         "NeedsCompilation": "yes",
-        "Packaged": "2023-10-06 15:29:21 UTC; cpsievert",
+        "Packaged": "2023-11-03 15:32:24 UTC; cpsievert",
         "Author": "Joe Cheng [aut],\n  Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Winston Chang [aut] (<https://orcid.org/0000-0002-1576-2126>),\n  Yihui Xie [aut],\n  Jeff Allen [aut],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Carson Sievert <carson@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-10-06 20:40:06 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:16:26 UTC; unix",
+        "Date/Publication": "2023-11-03 17:00:07 UTC",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:17:27 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "htmltools",
         "RemoteRef": "htmltools",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "0.5.6.1"
+        "RemoteSha": "0.5.7"
       }
     },
     "httpuv": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "httpuv",
@@ -603,18 +605,18 @@
         "Maintainer": "Winston Chang <winston@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-10-23 19:40:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:19:20 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:19:23 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "httpuv",
         "RemoteRef": "httpuv",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.6.12"
       }
     },
     "jquerylib": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "jquerylib",
         "Title": "Obtain 'jQuery' as an HTML Dependency Object",
@@ -633,18 +635,18 @@
         "Maintainer": "Carson Sievert <carson@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2021-04-26 17:10:02 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:16:32 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:17:32 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "jquerylib",
         "RemoteRef": "jquerylib",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.1.4"
       }
     },
     "jsonlite": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "jsonlite",
         "Version": "1.8.7",
@@ -665,18 +667,18 @@
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Duncan Temple Lang [ctb],\n  Lloyd Hilaiel [cph] (author of bundled libyajl)",
         "Repository": "CRAN",
         "Date/Publication": "2023-06-29 22:10:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:09:59 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:37 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "jsonlite",
         "RemoteRef": "jsonlite",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.8.7"
       }
     },
     "later": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "later",
         "Type": "Package",
@@ -699,53 +701,53 @@
         "Maintainer": "Winston Chang <winston@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-05-02 18:10:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:15:58 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:17:07 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "later",
         "RemoteRef": "later",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.3.1"
       }
     },
     "lifecycle": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "lifecycle",
         "Title": "Manage the Life Cycle of your Package Functions",
-        "Version": "1.0.3",
-        "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Version": "1.0.4",
+        "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
         "Description": "Manage the life cycle of your exported functions with shared\n    conventions, documentation badges, and user-friendly deprecation\n    warnings.",
         "License": "MIT + file LICENSE",
         "URL": "https://lifecycle.r-lib.org/, https://github.com/r-lib/lifecycle",
         "BugReports": "https://github.com/r-lib/lifecycle/issues",
-        "Depends": "R (>= 3.4)",
-        "Imports": "cli (>= 3.4.0), glue, rlang (>= 1.0.6)",
+        "Depends": "R (>= 3.6)",
+        "Imports": "cli (>= 3.4.0), glue, rlang (>= 1.1.0)",
         "Suggests": "covr, crayon, knitr, lintr, rmarkdown, testthat (>= 3.0.1),\ntibble, tidyverse, tools, vctrs, withr",
         "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate, usethis",
         "Config/testthat/edition": "3",
-        "Config/Needs/website": "tidyverse/tidytemplate",
         "Encoding": "UTF-8",
         "RoxygenNote": "7.2.1",
         "NeedsCompilation": "no",
-        "Packaged": "2022-10-07 08:50:55 UTC; lionel",
-        "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  RStudio [cph, fnd]",
-        "Maintainer": "Lionel Henry <lionel@rstudio.com>",
+        "Packaged": "2023-11-06 16:07:36 UTC; lionel",
+        "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Lionel Henry <lionel@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2022-10-07 09:50:02 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:16:22 UTC; unix",
+        "Date/Publication": "2023-11-07 10:10:10 UTC",
+        "Built": "R 4.3.2; ; 2023-11-24 13:17:22 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "lifecycle",
         "RemoteRef": "lifecycle",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "1.0.3"
+        "RemoteSha": "1.0.4"
       }
     },
     "logger": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "logger",
@@ -769,18 +771,18 @@
         "Maintainer": "Gergely Daróczi <daroczig@rapporter.net>",
         "Repository": "CRAN",
         "Date/Publication": "2021-10-19 05:30:08 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:13:52 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:15:14 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "logger",
         "RemoteRef": "logger",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.2.2"
       }
     },
     "magrittr": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "magrittr",
@@ -804,18 +806,18 @@
         "Maintainer": "Lionel Henry <lionel@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2022-03-30 07:30:09 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:10:05 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:40 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "magrittr",
         "RemoteRef": "magrittr",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "2.0.3"
       }
     },
     "memoise": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "memoise",
         "Title": "'Memoisation' of Functions",
@@ -835,18 +837,18 @@
         "Maintainer": "Winston Chang <winston@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2021-11-26 16:11:10 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:16:24 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:17:24 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "memoise",
         "RemoteRef": "memoise",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "2.0.1"
       }
     },
     "mime": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "mime",
         "Type": "Package",
@@ -866,18 +868,18 @@
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Repository": "CRAN",
         "Date/Publication": "2021-09-28 05:00:05 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:10:06 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:42 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "mime",
         "RemoteRef": "mime",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.12"
       }
     },
     "promises": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "promises",
@@ -902,18 +904,18 @@
         "Maintainer": "Joe Cheng <joe@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-08-10 16:00:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:18:40 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:18:55 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "promises",
         "RemoteRef": "promises",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.2.1"
       }
     },
     "purrr": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "purrr",
         "Title": "Functional Programming Tools",
@@ -939,18 +941,18 @@
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-08-10 08:20:07 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:22:15 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:21:32 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "purrr",
         "RemoteRef": "purrr",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.0.2"
       }
     },
     "rappdirs": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "rappdirs",
@@ -973,21 +975,21 @@
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2021-01-31 05:40:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:10:28 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:12:55 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "rappdirs",
         "RemoteRef": "rappdirs",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.3.3"
       }
     },
     "rlang": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "rlang",
-        "Version": "1.1.1",
+        "Version": "1.1.2",
         "Title": "Functions for Base Types and Core R and 'Tidyverse' Features",
         "Description": "A toolbox for working with base types, core R features\n  like the condition system, and core 'Tidyverse' features like tidy\n  evaluation.",
         "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", ,\"lionel@posit.co\", c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", ,\"hadley@posit.co\", \"aut\"),\n    person(given = \"mikefc\",\n           email = \"mikefc@coolbutuseless.com\", \n           role = \"cph\", \n           comment = \"Hash implementation based on Mike's xxhashlite\"),\n    person(given = \"Yann\",\n           family = \"Collet\",\n           role = \"cph\", \n           comment = \"Author of the embedded xxHash library\"),\n    person(given = \"Posit, PBC\", role = c(\"cph\", \"fnd\"))\n    )",
@@ -1005,23 +1007,23 @@
         "Config/testthat/edition": "3",
         "Config/Needs/website": "dplyr, tidyverse/tidytemplate",
         "NeedsCompilation": "yes",
-        "Packaged": "2023-04-28 10:48:43 UTC; lionel",
+        "Packaged": "2023-10-26 16:51:17 UTC; lionel",
         "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  mikefc [cph] (Hash implementation based on Mike's xxhashlite),\n  Yann Collet [cph] (Author of the embedded xxHash library),\n  Posit, PBC [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-04-28 22:30:03 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:11:20 UTC; unix",
+        "Date/Publication": "2023-11-04 06:30:03 UTC",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:13:29 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "rlang",
         "RemoteRef": "rlang",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "1.1.1"
+        "RemoteSha": "1.1.2"
       }
     },
     "sass": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Type": "Package",
         "Package": "sass",
@@ -1045,23 +1047,23 @@
         "Maintainer": "Carson Sievert <carson@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-07-15 06:20:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:16:35 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:17:34 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "sass",
         "RemoteRef": "sass",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.4.7"
       }
     },
     "shiny": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "shiny",
         "Type": "Package",
         "Title": "Web Application Framework for R",
-        "Version": "1.7.5.1",
+        "Version": "1.8.0",
         "Authors@R": "c(\n    person(\"Winston\", \"Chang\", role = c(\"aut\", \"cre\"), email = \"winston@posit.co\", comment = c(ORCID = \"0000-0002-1576-2126\")),\n    person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@posit.co\"),\n    person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@posit.co\"),\n    person(\"Carson\", \"Sievert\", role = \"aut\", email = \"carson@posit.co\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Barret\", \"Schloerke\", role = \"aut\", email = \"barret@posit.co\", comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Yihui\", \"Xie\", role = \"aut\", email = \"yihui@posit.co\"),\n    person(\"Jeff\", \"Allen\", role = \"aut\"),\n    person(\"Jonathan\", \"McPherson\", role = \"aut\", email = \"jonathan@posit.co\"),\n    person(\"Alan\", \"Dipert\", role = \"aut\"),\n    person(\"Barbara\", \"Borges\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(family = \"jQuery Foundation\", role = \"cph\",\n    comment = \"jQuery library and jQuery UI library\"),\n    person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt\"),\n    person(family = \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"jQuery UI library; authors listed in inst/www/shared/jqueryui/AUTHORS.txt\"),\n    person(\"Mark\", \"Otto\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(\"Jacob\", \"Thornton\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Bootstrap contributors\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Twitter, Inc\", role = \"cph\",\n    comment = \"Bootstrap library\"),\n    person(\"Prem Nawaz\", \"Khan\", role = \"ctb\",\n    comment = \"Bootstrap accessibility plugin\"),\n    person(\"Victor\", \"Tsaran\", role = \"ctb\",\n    comment = \"Bootstrap accessibility plugin\"),\n    person(\"Dennis\", \"Lembree\", role = \"ctb\",\n    comment = \"Bootstrap accessibility plugin\"),\n    person(\"Srinivasu\", \"Chakravarthula\", role = \"ctb\",\n    comment = \"Bootstrap accessibility plugin\"),\n    person(\"Cathy\", \"O'Connor\", role = \"ctb\",\n    comment = \"Bootstrap accessibility plugin\"),\n    person(family = \"PayPal, Inc\", role = \"cph\",\n    comment = \"Bootstrap accessibility plugin\"),\n    person(\"Stefan\", \"Petre\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootstrap-datepicker library\"),\n    person(\"Andrew\", \"Rowls\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootstrap-datepicker library\"),\n    person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"),\n    comment = \"selectize.js library\"),\n    person(\"Salmen\", \"Bejaoui\", role = c(\"ctb\", \"cph\"),\n    comment = \"selectize-plugin-a11y library\"),\n    person(\"Denis\", \"Ineshin\", role = c(\"ctb\", \"cph\"),\n    comment = \"ion.rangeSlider library\"),\n    person(\"Sami\", \"Samhuri\", role = c(\"ctb\", \"cph\"),\n    comment = \"Javascript strftime library\"),\n    person(family = \"SpryMedia Limited\", role = c(\"ctb\", \"cph\"),\n    comment = \"DataTables library\"),\n    person(\"John\", \"Fraser\", role = c(\"ctb\", \"cph\"),\n    comment = \"showdown.js library\"),\n    person(\"John\", \"Gruber\", role = c(\"ctb\", \"cph\"),\n    comment = \"showdown.js library\"),\n    person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n    comment = \"highlight.js library\"),\n    person(family = \"R Core Team\", role = c(\"ctb\", \"cph\"),\n    comment = \"tar implementation from R\")\n    )",
         "Description": "Makes it incredibly easy to build interactive web\n    applications with R. Automatic \"reactive\" binding between inputs and\n    outputs and extensive prebuilt widgets make it possible to build\n    beautiful, responsive, and powerful applications with minimal effort.",
         "License": "GPL-3 | file LICENSE",
@@ -1077,18 +1079,18 @@
         "Config/testthat/edition": "3",
         "Config/Needs/check": "shinytest2",
         "NeedsCompilation": "no",
-        "Packaged": "2023-10-06 21:29:36 UTC; cpsievert",
+        "Packaged": "2023-11-17 16:44:52 UTC; cpsievert",
         "Author": "Winston Chang [aut, cre] (<https://orcid.org/0000-0002-1576-2126>),\n  Joe Cheng [aut],\n  JJ Allaire [aut],\n  Carson Sievert [aut] (<https://orcid.org/0000-0002-4958-2844>),\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Yihui Xie [aut],\n  Jeff Allen [aut],\n  Jonathan McPherson [aut],\n  Alan Dipert [aut],\n  Barbara Borges [aut],\n  Posit Software, PBC [cph, fnd],\n  jQuery Foundation [cph] (jQuery library and jQuery UI library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/www/shared/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/www/shared/jqueryui/AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Prem Nawaz Khan [ctb] (Bootstrap accessibility plugin),\n  Victor Tsaran [ctb] (Bootstrap accessibility plugin),\n  Dennis Lembree [ctb] (Bootstrap accessibility plugin),\n  Srinivasu Chakravarthula [ctb] (Bootstrap accessibility plugin),\n  Cathy O'Connor [ctb] (Bootstrap accessibility plugin),\n  PayPal, Inc [cph] (Bootstrap accessibility plugin),\n  Stefan Petre [ctb, cph] (Bootstrap-datepicker library),\n  Andrew Rowls [ctb, cph] (Bootstrap-datepicker library),\n  Brian Reavis [ctb, cph] (selectize.js library),\n  Salmen Bejaoui [ctb, cph] (selectize-plugin-a11y library),\n  Denis Ineshin [ctb, cph] (ion.rangeSlider library),\n  Sami Samhuri [ctb, cph] (Javascript strftime library),\n  SpryMedia Limited [ctb, cph] (DataTables library),\n  John Fraser [ctb, cph] (showdown.js library),\n  John Gruber [ctb, cph] (showdown.js library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  R Core Team [ctb, cph] (tar implementation from R)",
         "Maintainer": "Winston Chang <winston@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-10-14 13:40:02 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:23:52 UTC; unix",
+        "Date/Publication": "2023-11-17 23:40:02 UTC",
+        "Built": "R 4.3.2; ; 2023-11-24 13:22:51 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "shiny",
         "RemoteRef": "shiny",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "1.7.5.1"
+        "RemoteSha": "1.8.0"
       }
     },
     "shiny.molstar": {
@@ -1110,26 +1112,26 @@
         "Roxygen": "list(markdown = TRUE)",
         "Config/rcmdcheck/ignore-inconsequential-notes": "true",
         "NeedsCompilation": "no",
-        "Packaged": "2023-10-25 16:24:58 UTC; runner",
+        "Packaged": "2023-11-24 13:23:52 UTC; runner",
         "Author": "André Veríssimo [aut],\n  Appsilon Sp. z o.o. [cph, cre]",
         "Maintainer": "Appsilon Sp. z o.o. <hello@appsilon.com>",
-        "Built": "R 4.3.1; ; 2023-10-25 16:25:00 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:23:53 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shiny.molstar",
         "RemoteUsername": "Appsilon",
-        "RemotePkgRef": "Appsilon/shiny.molstar@eab110830c247b6713c6d755dc69f4fa414e965c",
-        "RemoteRef": "eab110830c247b6713c6d755dc69f4fa414e965c",
-        "RemoteSha": "eab110830c247b6713c6d755dc69f4fa414e965c",
+        "RemotePkgRef": "Appsilon/shiny.molstar@17e1fe47bd9698c4b6dd0d98d91631002c127843",
+        "RemoteRef": "17e1fe47bd9698c4b6dd0d98d91631002c127843",
+        "RemoteSha": "17e1fe47bd9698c4b6dd0d98d91631002c127843",
         "GithubRepo": "shiny.molstar",
         "GithubUsername": "Appsilon",
-        "GithubRef": "eab110830c247b6713c6d755dc69f4fa414e965c",
-        "GithubSHA1": "eab110830c247b6713c6d755dc69f4fa414e965c"
+        "GithubRef": "17e1fe47bd9698c4b6dd0d98d91631002c127843",
+        "GithubSHA1": "17e1fe47bd9698c4b6dd0d98d91631002c127843"
       }
     },
     "shiny.react": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "shiny.react",
         "Title": "Tools for Using React in Shiny",
@@ -1149,18 +1151,18 @@
         "Maintainer": "Kamil Żyła <opensource+kamil@appsilon.com>",
         "Repository": "CRAN",
         "Date/Publication": "2022-12-25 07:20:07 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:24:55 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:23:45 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "shiny.react",
         "RemoteRef": "shiny.react",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.3.0"
       }
     },
     "sourcetools": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "sourcetools",
         "Type": "Package",
@@ -1179,18 +1181,18 @@
         "Packaged": "2023-01-31 18:03:04 UTC; kevin",
         "Repository": "CRAN",
         "Date/Publication": "2023-02-01 10:10:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:11:43 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:13:43 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "sourcetools",
         "RemoteRef": "sourcetools",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.1.7-1"
       }
     },
     "vctrs": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "vctrs",
         "Title": "Vector Helpers",
@@ -1215,22 +1217,22 @@
         "Maintainer": "Davis Vaughan <davis@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-10-12 22:20:02 UTC",
-        "Built": "R 4.3.1; x86_64-pc-linux-gnu; 2023-10-25 16:18:54 UTC; unix",
+        "Built": "R 4.3.2; x86_64-pc-linux-gnu; 2023-11-24 13:19:05 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "vctrs",
         "RemoteRef": "vctrs",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.6.4"
       }
     },
     "withr": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "withr",
         "Title": "Run Code 'With' Temporarily Modified Global State",
-        "Version": "2.5.1",
+        "Version": "2.5.2",
         "Authors@R": "\n    c(person(given = \"Jim\",\n             family = \"Hester\",\n             role = \"aut\"),\n      person(given = \"Lionel\",\n             family = \"Henry\",\n             role = c(\"aut\", \"cre\"),\n             email = \"lionel@posit.co\"),\n      person(given = \"Kirill\",\n             family = \"Müller\",\n             role = \"aut\",\n             email = \"krlmlr+r@mailbox.org\"),\n      person(given = \"Kevin\",\n             family = \"Ushey\",\n             role = \"aut\",\n             email = \"kevinushey@gmail.com\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Winston\",\n             family = \"Chang\",\n             role = \"aut\"),\n      person(given = \"Jennifer\",\n             family = \"Bryan\",\n             role = \"ctb\"),\n      person(given = \"Richard\",\n             family = \"Cotton\",\n             role = \"ctb\"),\n      person(given = \"Posit Software, PBC\",\n             role = c(\"cph\", \"fnd\")))",
         "Description": "A set of functions to run code 'with' safely and\n    temporarily modified global state. Many of these functions were\n    originally a part of the 'devtools' package, this provides a simple\n    package with limited dependencies to provide access to these\n    functions.",
         "License": "MIT + file LICENSE",
@@ -1246,23 +1248,23 @@
         "Config/testthat/edition": "3",
         "Config/Needs/website": "tidyverse/tidytemplate",
         "NeedsCompilation": "no",
-        "Packaged": "2023-09-26 08:28:27 UTC; lionel",
+        "Packaged": "2023-10-24 08:50:10 UTC; lionel",
         "Author": "Jim Hester [aut],\n  Lionel Henry [aut, cre],\n  Kirill Müller [aut],\n  Kevin Ushey [aut],\n  Hadley Wickham [aut],\n  Winston Chang [aut],\n  Jennifer Bryan [ctb],\n  Richard Cotton [ctb],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@posit.co>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-09-26 12:20:02 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:13:29 UTC; unix",
+        "Date/Publication": "2023-10-30 09:10:02 UTC",
+        "Built": "R 4.3.2; ; 2023-11-24 13:14:58 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "withr",
         "RemoteRef": "withr",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
-        "RemoteSha": "2.5.1"
+        "RemoteSha": "2.5.2"
       }
     },
     "xtable": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "xtable",
         "Version": "1.8-4",
@@ -1282,11 +1284,11 @@
         "Packaged": "2019-04-21 10:56:51 UTC; dsco036",
         "Author": "David B. Dahl [aut],\n  David Scott [aut, cre],\n  Charles Roosen [aut],\n  Arni Magnusson [aut],\n  Jonathan Swinton [aut],\n  Ajay Shah [ctb],\n  Arne Henningsen [ctb],\n  Benno Puetz [ctb],\n  Bernhard Pfaff [ctb],\n  Claudio Agostinelli [ctb],\n  Claudius Loehnert [ctb],\n  David Mitchell [ctb],\n  David Whiting [ctb],\n  Fernando da Rosa [ctb],\n  Guido Gay [ctb],\n  Guido Schulz [ctb],\n  Ian Fellows [ctb],\n  Jeff Laake [ctb],\n  John Walker [ctb],\n  Jun Yan [ctb],\n  Liviu Andronic [ctb],\n  Markus Loecher [ctb],\n  Martin Gubri [ctb],\n  Matthieu Stigler [ctb],\n  Robert Castelo [ctb],\n  Seth Falcon [ctb],\n  Stefan Edwards [ctb],\n  Sven Garbade [ctb],\n  Uwe Ligges [ctb]",
         "Date/Publication": "2019-04-21 12:20:03 UTC",
-        "Built": "R 4.3.1; ; 2023-10-25 16:13:35 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-11-24 13:15:02 UTC; unix",
         "RemoteType": "standard",
         "RemotePkgRef": "xtable",
         "RemoteRef": "xtable",
-        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemotePkgPlatform": "source",
         "RemoteSha": "1.8-4"
       }
