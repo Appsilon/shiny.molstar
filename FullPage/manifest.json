@@ -1112,21 +1112,21 @@
         "Roxygen": "list(markdown = TRUE)",
         "Config/rcmdcheck/ignore-inconsequential-notes": "true",
         "NeedsCompilation": "no",
-        "Packaged": "2023-12-12 16:19:12 UTC; runner",
+        "Packaged": "2023-12-18 13:40:25 UTC; runner",
         "Author": "André Veríssimo [aut],\n  Appsilon Sp. z o.o. [cph, cre]",
         "Maintainer": "Appsilon Sp. z o.o. <hello@appsilon.com>",
-        "Built": "R 4.3.2; ; 2023-12-12 16:19:13 UTC; unix",
+        "Built": "R 4.3.2; ; 2023-12-18 13:40:26 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteRepo": "shiny.molstar",
         "RemoteUsername": "Appsilon",
-        "RemotePkgRef": "Appsilon/shiny.molstar@181a0489172ae5972495ffb17976cf7da9825eae",
-        "RemoteRef": "181a0489172ae5972495ffb17976cf7da9825eae",
-        "RemoteSha": "181a0489172ae5972495ffb17976cf7da9825eae",
+        "RemotePkgRef": "Appsilon/shiny.molstar@cedb6dc1c0aa25048358590e5ac754bba95bf3e5",
+        "RemoteRef": "cedb6dc1c0aa25048358590e5ac754bba95bf3e5",
+        "RemoteSha": "cedb6dc1c0aa25048358590e5ac754bba95bf3e5",
         "GithubRepo": "shiny.molstar",
         "GithubUsername": "Appsilon",
-        "GithubRef": "181a0489172ae5972495ffb17976cf7da9825eae",
-        "GithubSHA1": "181a0489172ae5972495ffb17976cf7da9825eae"
+        "GithubRef": "cedb6dc1c0aa25048358590e5ac754bba95bf3e5",
+        "GithubSHA1": "cedb6dc1c0aa25048358590e5ac754bba95bf3e5"
       }
     },
     "shiny.react": {
